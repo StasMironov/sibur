@@ -27,7 +27,7 @@
 
     &__action {
         display: block;
-        margin-bottom: rem(29);
+        margin-top: rem(29);
 
         @include media-breakpoint-up(md) {
             display: none;

@@ -1,3 +1,31 @@
 {
-    "block_info": {}
+    "block_info": {
+        "title_hidden": "Электронный каталог",
+		"title": [
+			"<span>Оптимальные решения</span>",
+			"для партнеров"
+		],
+        "background": {
+			"src": "tmp/blocks/block-info/bg.jpg",
+			"alt": "alt image",
+			"tab": {
+				"srcset": [
+					{
+						"src": "tmp/blocks/block-info/bg-tab.jpg",
+						"scale": "1"
+					}
+				]
+			}
+		},
+		"desc": "Вы можете легко найти необходимые вам продукты по следующим категориям",
+        "action": {
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"title": "Button",
+			"text": "Купить продукцию",
+			"background": "green"
+		}
+    }
 }

@@ -1,4 +1,36 @@
 <div class="block-info">
-    <div class="block-info__container container">
+    <div class="block-info__container container ">   
+        
+        <div class="block-info__content">
+            {% if block_info.title_hidden %}
+                <h3 class="visually-hidden">{{block_info.title_hidden}}</h3>
+            {% endif %}
+            {% if block_info.title %}
+                <div class="block-info__title">
+                    {% for title in block_info.title %}
+                        <div class="block-info__title-line">{{ title }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% if block_info.desc %}
+                <div class="block-info__desc">
+                    {{block_info.desc}}
+                </div>
+            {% endif %}
+            {% if block_info.action %}
+                <div class="block-info__action">
+                    {% view '@button-icon' with {
+                        button: block_info.action
+                    } %}
+                </div>
+            {% endif %}
+            {% if block_info.background %}
+                <div class="block-info__background">
+                    {% view '@image-adaptive' with {
+                        image: block_info.background
+                    } %}
+                </div>
+            {% endif %}
+        </div>
     </div>
 </div>
