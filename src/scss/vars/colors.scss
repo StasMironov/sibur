@@ -1,0 +1,34 @@
+$color-true-black: #000;
+
+$color-white: #fff;
+$color-black: #00313C;
+$color-red: #DF192C;
+
+$color-green: #008C95;
+$color-green-light: #77E2C3;
+$color-green-superlight:#E0FBF3;
+
+$color-background: #F5F5F5;
+
+$color-orange: #E04E39;
+
+$color-opacity-dark: rgba(#00313C, 0.4);
+$color-opacity-white: #00313c33;
+
+$color-gray: #F5F5F5;
+
+$colors: (
+	"white": $color-white,
+	"black": $color-black,
+	"red": $color-red,
+	"green": $color-green,
+	"green-light": $color-green-light,
+	"green-superlight": $color-green-superlight,
+	"background": $color-background,
+	"orange": $color-orange,
+	"opacity-dark": $color-opacity-dark,
+	"opacity-white": $color-opacity-white,
+	"gray": $color-gray
+);
+
+

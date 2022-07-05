@@ -1,0 +1,373 @@
+{
+	"title": "Атомы",
+	"icons": {
+		"16px": [
+			{
+				"name": "16/dropdown",
+				"size": "16"
+			},
+			{
+				"name": "16/dropdown_up",
+				"size": "16"
+			},
+			{
+				"name": "16/slider",
+				"size": "16"
+			},
+			{
+				"name": "16/slider_right",
+				"size": "16"
+			},
+			{
+				"name": "16/dot",
+				"size": "16"
+			}
+		],
+		"24px": [
+			{
+				"name": "24/search",
+				"size": "24"
+			},
+			{
+				"name": "24/arrow",
+				"size": "24"
+			},
+			{
+				"name": "24/slider_right",
+				"size": "24"
+			},
+			{
+				"name": "24/slider_left",
+				"size": "24"
+			}		
+		],
+		"80px": [
+			{
+				"name": "80/focus",
+				"size": "80"
+			},
+			{
+				"name": "80/arms",
+				"size": "80"
+			},
+			{
+				"name": "80/med",
+				"size": "80"
+			},
+			{
+				"name": "80/chat",
+				"size": "80"
+			},
+			{
+				"name": "80/people",
+				"size": "80"
+			},
+			{
+				"name": "80/idea",
+				"size": "80"
+			},
+			{
+				"name": "80/nature",
+				"size": "80"
+			}
+		]
+	},
+	"buttonsIcon": [
+		{
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"title": "Button",
+			"text": "Купить продукцию"
+		},
+		{
+			"href": "!#",
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"title": "Button",
+			"text": "Купить продукцию"
+		},
+		{
+			"href": "!#",
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"title": "Button",
+			"text": "Купить продукцию",
+			"disabled": true
+		}
+	],
+	"buttonsIconLine": [
+		{
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"text": "Купить продукцию",
+			"title": "Button",
+			"theme": "line"
+		},
+		{
+			"href": "!#",
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"text": "Купить продукцию",
+			"title": "Button",
+			"theme": "line"
+		},
+		{
+			"href": "!#",
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"text": "Купить продукцию",
+			"title": "Button",
+			"theme": "line",
+			"disabled": true
+		}
+	],
+	"buttonsLineBackgroundDark": [
+		{
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"text": "Купить продукцию",
+			"title": "Button",
+			"theme": "line",
+			"background": "dark"
+		},
+		{
+			"href": "!#",
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"text": "Купить продукцию",
+			"title": "Button",
+			"theme": "line",
+			"background": "dark"
+		},
+		{
+			"href": "!#",
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"text": "Купить продукцию",
+			"title": "Button",
+			"theme": "line",
+			"background": "dark",
+			"disabled": true
+		}
+	],
+	"buttonsLineBackgroundGreen": [
+		{
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"text": "Купить продукцию",
+			"title": "Button",
+			"theme": "line",
+			"background": "green"
+		},
+		{
+			"href": "!#",
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"text": "Купить продукцию",
+			"title": "Button",
+			"theme": "line",
+			"background": "green"
+		},
+		{
+			"href": "!#",
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"text": "Купить продукцию",
+			"title": "Button",
+			"theme": "line",
+			"background": "green",
+			"disabled": true
+		}
+	],
+	"buttons": [
+		{
+			"href": "!#",
+			"title": "Button",
+			"text": "Купить продукцию"
+		},
+		{
+			"title": "Button",
+			"text": "Купить продукцию"
+		},
+		{
+			"href": "!#",
+			"title": "Button",
+			"text": "Купить продукцию",
+			"disabled": true
+		}
+	],
+	"buttonsBackgroundGreen": [
+		{
+			"href": "!#",
+			"title": "Button",
+			"text": "Купить продукцию",
+			"background": "greenLight"
+		},
+		{
+			"title": "Button",
+			"text": "Купить продукцию",
+			"background": "greenLight"
+		},
+		{
+			"href": "!#",
+			"title": "Button",
+			"text": "Купить продукцию",
+			"background": "greenLight",
+			"disabled": true
+		}
+	],
+	"buttonsIconBackgroundGreen":[
+		{
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"title": "Button",
+			"text": "Купить продукцию",
+			"background": "green"
+		},
+		{
+			"href": "!#",
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"title": "Button",
+			"text": "Купить продукцию",
+			"background": "green"
+		},
+		{
+			"href": "!#",
+			"icon": {
+				"name": "24/arrow",
+				"size": "24"
+			},
+			"title": "Button",
+			"text": "Купить продукцию",
+			"disabled": true,
+			"background": "green"
+		}
+	],
+	"inputs": [
+		{
+			"input": true,
+			"id": "field-input-1",
+			"name": "field-input-1",
+			"placeholder": "placeholder",
+			"required": true
+		},
+		{
+			"input": true,
+			"id": "field-input-2",
+			"name": "field-input-2",
+			"placeholder": "placeholder",
+			"disabled": true
+		},
+		{
+			"input": true,
+			"id": "field-input-3",
+			"name": "field-input-3",
+			"placeholder": "placeholder",
+			"value": "value",
+			"required": true
+		},
+		{
+			"input": true,
+			"id": "field-input-4",
+			"name": "field-input-4",
+			"placeholder": "placeholder",
+			"value": "value",
+			"required": true,
+			"disabled": true
+		},
+		{
+			"input": true,
+			"id": "field-input-5",
+			"name": "field-input-5",
+			"placeholder": "placeholder",
+			"required": true,
+			"hint": {
+				"icon": {
+					"name": "24/question"
+				},
+				"text": "Text tool-tip. Lorem ipsum dolor sit amet, consectetuer adipiscing."
+			}
+		}
+	],
+	"inputsBackground": [
+		{
+			"input": true,
+			"id": "field-input-1",
+			"name": "field-input-1",
+			"placeholder": "placeholder",
+			"required": true,
+			"theme": "color"
+		},
+		{
+			"input": true,
+			"id": "field-input-2",
+			"name": "field-input-2",
+			"placeholder": "placeholder",
+			"disabled": true,
+			"theme": "color"
+		},
+		{
+			"input": true,
+			"id": "field-input-3",
+			"name": "field-input-3",
+			"placeholder": "placeholder",
+			"value": "value",
+			"required": true,
+			"theme": "color"
+		},
+		{
+			"input": true,
+			"id": "field-input-4",
+			"name": "field-input-4",
+			"placeholder": "placeholder",
+			"value": "value",
+			"required": true,
+			"disabled": true,
+			"theme": "color"
+		},
+		{
+			"input": true,
+			"id": "field-input-5",
+			"name": "field-input-5",
+			"placeholder": "placeholder",
+			"required": true,
+			"hint": {
+				"icon": {
+					"name": "24/question"
+				},
+				"text": "Text tool-tip. Lorem ipsum dolor sit amet, consectetuer adipiscing.",
+				"theme": "color"
+			},
+			"theme": "color"
+		}
+	]
+}

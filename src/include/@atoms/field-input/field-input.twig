@@ -1,0 +1,20 @@
+<div class="input-shell{% if field.theme %} input-shell--{{ field.theme }}{% endif %}">
+	<input {% if field.id %} id="{{ field.id }}"{% endif %}
+		type="{{ field.type?: 'text' }}"
+		class="input{% if field.class %} {{ field.class }}{% endif %}{% if field.theme %} input--{{ field.theme }}{% endif %}{{ field.hint ? ' input--has-hint' : '' }}"
+		{% if field.placeholder %} placeholder="{{ field.placeholder }}"{% endif %}
+		{% if field.name %} name="{{ field.name }}"{% endif %}
+		{% if field.autocomplete %} autocomplete="{{ field.autocomplete }}"{% endif %}
+		{% if field.disabled %} disabled{% endif %}
+		{% if field.required %} required{% endif %}
+		{% if field.value %} value="{{ field.value }}"{% endif %}
+		{% if field.readonly %} readonly{% endif %}
+		{% if field.attr %} {{ field.attr }}{% endif %}>
+	{% if field.hint %}
+		<div class="input-hint">
+			{% view '@hint' with {
+				hint: field.hint
+			} %}
+		</div>
+	{% endif %}
+</div>

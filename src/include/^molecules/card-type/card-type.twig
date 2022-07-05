@@ -1,0 +1,31 @@
+<a{% if card.id %} id="{{ card.id }}"{% endif %}{% if card.href %} href="{{ card.href }}"{% endif %}
+	class="card-type"{% if card.attr %} {{ card.attr }}{% endif %} itemprop="blogPosts" itemscope
+	itemtype="http://schema.org/BlogPosting">
+    <div class="card-type__top">
+        {% if card.title %}
+            <div class="card-type__title" itemprop="headline">
+                {{card.title.text}}
+
+                {% if card.title.sup %}
+                    <sup class="card-type__title-sup">
+                        {{card.title.sup}}
+                    </sup>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+        
+    <div class="card-type__bottom">
+        <div class="card-type__image">
+                {% if card.image.tab or card.image.mob %}
+                    {% view '@image-adaptive' with {
+                        image: card.image
+                    } %}
+                {% else %}
+                    {% view '@image' with {
+                        image: card.image
+                    } %}
+                {% endif %}
+        </div>
+    </div>
+</a>

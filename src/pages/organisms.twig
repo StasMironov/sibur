@@ -1,0 +1,52 @@
+{% extends "layouts::_page.twig" %}
+
+{% block content %}
+
+	<div>
+		<!--<editor-fold desc="&hero">-->
+
+		<div class="py-40">
+			<div class="container">
+				<p class="h2 mb-24"><code>&hero</code></p>
+			</div>
+
+			{% view '&hero' with {
+				hero: hero
+			} %}
+		</div>
+
+		<!--</editor-fold>-->
+
+		<!--<editor-fold desc="&slider-type">-->
+
+		<div class="py-40">
+			<div class="container">
+				<p class="h2 mb-24"><code>&slider-type</code></p>
+			</div>
+
+			{% view '&slider-type' with {
+				slider: sliderType
+			} %}
+		</div>
+
+		<!--</editor-fold>-->
+
+		<!--<editor-fold desc="&block-products">-->
+
+		<div class="py-40">
+			<div class="container">
+				<p class="h2 mb-24"><code>&block-products</code></p>
+			</div>
+
+			{% view '&block-products' with {
+				block: blockProducts
+			} %}
+		</div>
+
+		<!--</editor-fold>-->
+
+
+
+	</div>
+
+{% endblock %}

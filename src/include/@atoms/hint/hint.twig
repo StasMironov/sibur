@@ -1,0 +1,16 @@
+<div class="hint{% if hint.theme %} hint--{{ hint.theme }}{% endif %}"
+	 data-hint{% if hint.text %} data-hint-content="{{ hint.text }}"{% endif %}>
+	<div class="hint__icon">
+		{% if hint.icon %}
+			{% view '@icon' with {
+				icon: hint.icon
+			} %}
+		{% else %}
+			{% view '@icon' with {
+				icon: {
+					name: "24/question"
+				}
+			} %}
+		{% endif %}
+	</div>
+</div>

@@ -1,0 +1,12 @@
+<div class="heading">
+	{% if heading.title %}
+		<h3 class="heading__title h3">{{ heading.title }}</h3>
+	{% endif %}
+	{% if heading.action %}
+		<div class="heading__action">
+			{% view '@button' with {
+				button: heading.action
+			} %}
+		</div>
+	{% endif %}
+</div>

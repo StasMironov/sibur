@@ -1,0 +1,11 @@
+.nav-count {
+  $b: #{&};
+  @include h3;
+  display: inline-flex;
+  color: rgba($color-black, 0.2);
+  user-select: none;
+
+  &__current {
+    color: $color-black;
+  }
+}

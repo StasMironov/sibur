@@ -1,0 +1,14 @@
+{
+    "card": {
+        "id": "card-news-1",
+        "href": "javascript:void(0);",
+        "image": {
+            "src": "tmp/cards/card-type/image-1.jpg",
+            "alt": "image alt"
+        },
+        "title": {
+            "text": "Упаковка",
+            "sup": "128"
+        }
+    }
+}

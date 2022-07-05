@@ -1,0 +1,54 @@
+<div class="slider-type" data-slider-type>
+
+	<div class="slider-type__heading container">
+		{% if slider.title %}
+			<h3 class="slider-type__title">
+				{{slider.title}}
+			</h3>
+		{% endif %}
+
+		{% if slider.action %}
+			<div class="slider-type__action">
+				{% view '@button' with {
+					button: slider.action
+				} %}
+			</div>
+		{% endif %}
+	</div>
+	
+
+	<div class="slider-type__content">
+		<div class="slider-type__container container">
+			<div class="slider-type__base">
+				<div class="swiper" data-slider>
+					<div class="swiper-wrapper">
+						{% for slide in slider.slides %}
+							<div class="slider-type__slide swiper-slide">
+								{% view '^card-type' with {
+									card: slide
+								} %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+
+				{% if slider.action %}
+					<div class="slider-type__action">
+						{% view '@button' with {
+							button: slider.action
+						} %}
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	{% if slider.actions or slider.slides|length > 2 %}
+		<div class="slider-type__bottom container">
+			{% if slider.slides|length > 2 %}
+				<div class="slider-type__arrows">
+					{% view '@nav-arrows' %}
+				</div>
+			{% endif %}
+		</div>
+	{% endif %}
+</div>

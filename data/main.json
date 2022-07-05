@@ -1,0 +1,521 @@
+{
+	"title": "Главная",
+	"features": {
+		"heading": {
+			"title": "Почему клиенты выбирают АТОЛ&nbsp;Онлайн",
+			"text": "Думайте о бизнесе, кассой займемся мы"
+		},
+		"items": [
+			{
+				"id": "card-feature-1",
+				"type": "1",
+				"background": {
+					"src": "tmp/cards/card-feature/bg-1.jpg",
+					"alt": "alt image",
+					"mob": {
+						"srcset": [
+							{
+								"src": "tmp/cards/card-feature/bg-1-mob.jpg",
+								"scale": "1"
+							}
+						]
+					}
+				},
+				"images": [
+					{
+						"src": "tmp/cards/card-feature/img-1.png",
+						"alt": "alt image"
+					},
+					{
+						"src": "tmp/cards/card-feature/img-2.png",
+						"alt": "alt image"
+					}
+				],
+				"title": "Мы первыми сделали облачные&nbsp;кассы",
+				"text": "Мы до сих пор остаемся лидерами среди операторов облачных касс (дисклеймер - по&nbsp;версии CNEWS 2018)",
+				"attr": "data-attr"
+			},
+			{
+				"id": "card-feature-2",
+				"type": "2",
+				"background": {
+					"src": "tmp/cards/card-feature/bg-2.jpg",
+					"alt": "alt image",
+					"mob": {
+						"srcset": [
+							{
+								"src": "tmp/cards/card-feature/bg-2-mob.jpg",
+								"scale": "1"
+							}
+						]
+					}
+				},
+				"images": [
+					{
+						"src": "tmp/cards/card-feature/img-3.png",
+						"alt": "alt image"
+					},
+					{
+						"src": "tmp/cards/card-feature/img-4.png",
+						"alt": "alt image"
+					}
+				],
+				"title": "Наша касса легко подключается",
+				"text": "Не надо тратить время на настройку - вы&nbsp;быстро запустите продажи. C нами уже&nbsp;интегрированы большинство платежных&nbsp;систем, CMS и CRM.",
+				"attr": "data-attr"
+			},
+			{
+				"id": "card-feature-3",
+				"type": "3",
+				"background": {
+					"src": "tmp/cards/card-feature/bg-3.jpg",
+					"alt": "alt image",
+					"mob": {
+						"srcset": [
+							{
+								"src": "tmp/cards/card-feature/bg-3-mob.jpg",
+								"scale": "1"
+							}
+						]
+					}
+				},
+				"images": [
+					{
+						"src": "tmp/cards/card-feature/img-5.png",
+						"alt": "alt image"
+					},
+					{
+						"src": "tmp/cards/card-feature/img-6.png",
+						"alt": "alt image"
+					}
+				],
+				"title": "Вы не потратите лишнего",
+				"text": "У нас гибкие тарифы, специальные предложения для каждой отрасли и&nbsp;бесплатное подключение к ОФД",
+				"attr": "data-attr"
+			}
+		]
+	},
+	"sliderPromo": {
+		"heading": "Кому подойдет облачная касса",
+		"background": {
+			"src": "tmp/sliders/slider-promo/bg.jpg",
+			"alt": "alt image",
+			"tab": {
+				"srcset": [
+					{
+						"src": "tmp/sliders/slider-promo/bg-tab.jpg",
+						"scale": "1"
+					}
+				]
+			},
+			"mob": {
+				"srcset": [
+					{
+						"src": "tmp/sliders/slider-promo/bg-mob.jpg",
+						"scale": "1"
+					}
+				]
+			}
+		},
+		"slides": [
+			{
+				"id": "card-simple-1",
+				"href": "javascript:void(0);",
+				"title": "E-commerce",
+				"text": "Все виды торговли в интернете",
+				"icon": {
+					"name": "72/e-commerce",
+					"size": "fit"
+				}
+			},
+			{
+				"id": "card-simple-2",
+				"href": "javascript:void(0);",
+				"title": "ЖКХ",
+				"text": "Фискальный учет безналичных коммунальных платежей",
+				"icon": {
+					"name": "72/home",
+					"size": "fit"
+				}
+			},
+			{
+				"id": "card-simple-3",
+				"href": "javascript:void(0);",
+				"title": "Перевозки и курьеры",
+				"text": "Общественный транспорт, такси, платежи&nbsp;курьерам",
+				"icon": {
+					"name": "72/transportation",
+					"size": "fit"
+				}
+			},
+			{
+				"id": "card-simple-4",
+				"href": "javascript:void(0);",
+				"title": "E-commerce",
+				"text": "Все виды торговли в интернете",
+				"icon": {
+					"name": "72/e-commerce",
+					"size": "fit"
+				}
+			},
+			{
+				"id": "card-simple-5",
+				"href": "javascript:void(0);",
+				"title": "ЖКХ",
+				"text": "Фискальный учет безналичных коммунальных платежей",
+				"icon": {
+					"name": "72/home",
+					"size": "fit"
+				}
+			},
+			{
+				"id": "card-simple-6",
+				"href": "javascript:void(0);",
+				"title": "Перевозки и курьеры",
+				"text": "Общественный транспорт, такси, платежи курьерам",
+				"icon": {
+					"name": "72/transportation",
+					"size": "fit"
+				}
+			}
+		]
+	},
+	"sliderSwitch": {
+		"heading": "Тарифы",
+		"switch": {
+			"switch": true,
+			"id": "slider-switch-input",
+			"name": "slider-switch-input",
+			"prefix": "За год",
+			"suffix": "Помесячно",
+			"attr": "data-switch-slider-toggle",
+			"alwaysActive": true
+		},
+		"itemsFirst": [
+			{
+				"id": "card-tariff-1",
+				"label": "тариф",
+				"title": "Базовый",
+				"list": [
+					"Услуги облачной фискализации;",
+					"1000 рублей на рекламу вашего сайта в&nbsp;Яндекс&nbsp;Бизнесе;"
+				],
+				"text": "*Самостоятельная регистрация в ФНС. Услуги ОФД оплачиваются отдельно.<br>ФН докупается отдельно:<br>на 15 месяцев — 9 200 ₽<br>на 36 месяцев — 13 500 ₽",
+				"price": "от 1 700 ₽/мес",
+				"action": {
+					"href": "javascript:void(0);",
+					"text": "Подключить",
+					"title": "Подключить",
+					"size": "small"
+				}
+			},
+			{
+				"id": "card-tariff-2",
+				"main": true,
+				"label": "тариф",
+				"title": "Без забот",
+				"list": [
+					"Услуги облачной фискализации;",
+					"Сервис под ключ;",
+					"Регистрация кассы в ФНС;",
+					"Услуги ОФД;",
+					"Интеграция с платежной системой;",
+					"Выделенная линия техподдержки;",
+					"1000 рублей на рекламу вашего сайта в&nbsp;Яндекс Бизнесе."
+				],
+				"price": "от 3 300 ₽/мес",
+				"action": {
+					"href": "javascript:void(0);",
+					"text": "Подключить",
+					"title": "Подключить",
+					"size": "small",
+					"background": "red"
+				},
+				"badge": "Выгодно"
+			},
+			{
+				"id": "card-tariff-3",
+				"label": "тариф",
+				"title": "Комплекс 3 в 1",
+				"list": [
+					"Открытие расчетного счета;",
+					"Подключение интернет-эквайринга (от&nbsp;2,5%);",
+					"Выдача чеков клиентам;",
+					"1000 рублей на рекламу вашего сайта в&nbsp;Яндекс Бизнесе;"
+				],
+				"text": "*Услуги РКО и интернет-эквайринга предоставляются партнёрами ООО&nbsp;«АТОЛ&nbsp;Онлайн»",
+				"action": {
+					"href": "javascript:void(0);",
+					"text": "Получить предложение",
+					"title": "Получить предложение",
+					"size": "small"
+				},
+				"badge": "В начале пути"
+			}
+		],
+		"itemsSecond": [
+			{
+				"id": "card-tariff-4",
+				"label": "тариф",
+				"title": "Базовый",
+				"list": [
+					"Услуги облачной фискализации;",
+					"1000 рублей на рекламу вашего сайта в&nbsp;Яндекс Бизнесе;"
+				],
+				"text": "*Самостоятельная регистрация в ФНС. Услуги ОФД оплачиваются отдельно. ФН докупается отдельно: на 15 месяцев — 9 200 ₽ на 36 месяцев — 13 500 ₽",
+				"price": "от 1 700 ₽/мес",
+				"action": {
+					"href": "javascript:void(0);",
+					"text": "Подключить",
+					"title": "Подключить",
+					"size": "small"
+				}
+			},
+			{
+				"id": "card-tariff-5",
+				"main": true,
+				"label": "тариф",
+				"title": "Без забот",
+				"list": [
+					"Услуги облачной фискализации;",
+					"Сервис под ключ;",
+					"Регистрация кассы в ФНС;",
+					"Услуги ОФД;",
+					"Интеграция с платежной системой;",
+					"Выделенная линия техподдержки;",
+					"1000 рублей на рекламу вашего сайта в Яндекс Бизнесе."
+				],
+				"price": "от 2 900 ₽/мес",
+				"action": {
+					"href": "javascript:void(0);",
+					"text": "Подключить",
+					"title": "Подключить",
+					"size": "small",
+					"background": "red"
+				},
+				"badge": "Выгодно"
+			},
+			{
+				"id": "card-tariff-6",
+				"label": "тариф",
+				"title": "Комплекс 3 в 1",
+				"list": [
+					"Открытие расчетного счета;",
+					"Подключение интернет-эквайринга (от 2,5%);",
+					"Выдача чеков клиентам;",
+					"1000 рублей на рекламу вашего сайта в Яндекс Бизнесе;"
+				],
+				"text": "*Услуги РКО и интернет-эквайринга предоставляются партнёрами ООО «АТОЛ Онлайн»",
+				"action": {
+					"href": "javascript:void(0);",
+					"text": "Получить предложение",
+					"title": "Получить предложение",
+					"size": "small"
+				},
+				"badge": "В начале пути"
+			}
+		],
+		"footer": {
+			"title": "Подарок",
+			"list": [
+				"3 месяца облачной кассы при&nbsp;оплате счета на&nbsp;12 месяцев",
+				"или Фискальный накопитель при&nbsp;оплате счета на&nbsp;36 месяцев"
+			],
+			"action": {
+				"title": "Оставить заявку",
+				"text": "Оставить заявку"
+			}
+		}
+	},
+	"sliderPartners": {
+		"heading": "Нам доверяют",
+		"slides": [
+			{
+				"id": "card-partner-1",
+				"icon": {
+					"name": "partners/tinkoff",
+					"size": "fit"
+				}
+			},
+			{
+				"id": "card-partner-2",
+				"icon": {
+					"name": "partners/alfabank",
+					"size": "fit"
+				}
+			},
+			{
+				"id": "card-partner-3",
+				"icon": {
+					"name": "partners/sberbank",
+					"size": "fit"
+				}
+			},
+			{
+				"id": "card-partner-4",
+				"icon": {
+					"name": "partners/citymobil",
+					"size": "fit"
+				}
+			},
+			{
+				"id": "card-partner-5",
+				"icon": {
+					"name": "partners/gett",
+					"size": "fit"
+				}
+			},
+			{
+				"id": "card-partner-6",
+				"icon": {
+					"name": "partners/yandextaxi",
+					"size": "fit"
+				}
+			}
+		],
+		"footer": {
+			"factoid": {
+				"value": "25 000",
+				"text": "клиентов и партнеров доверяют&nbsp;нам уже много лет"
+			},
+			"action": {
+				"text": "Подключиться",
+				"title": "Подключиться",
+				"background": "red"
+			}
+		}
+	},
+	"connectionSteps": {
+		"heading": {
+			"title": "Схема подключения АТОЛ&nbsp;Онлайн",
+			"text": "Как работает облачная касса АТОЛ&nbsp;Онлайн"
+		},
+		"lead": "Как работает облачная касса АТОЛ&nbsp;Онлайн",
+		"items": [
+			{
+				"title": "Заходите в личный кабинет АТОЛ Онлайн и скачиваете счет",
+				"list": [
+					{
+						"text": "Выбираете ОФД",
+						"hint": {
+							"icon": {
+								"name": "24/question"
+							},
+							"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quae?",
+							"theme": "white"
+						}
+					},
+					{
+						"text": "Оформляете КЭП",
+						"hint": {
+							"icon": {
+								"name": "24/question"
+							},
+							"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quae?",
+							"theme": "white"
+						}
+					}
+				]
+			},
+			{
+				"title": "Оплачиваете счет и&nbsp;регистрируете кассу&nbsp;в ФНС",
+				"list": [
+					{
+						"text": "Это займет около 10 минут с&nbsp;нашим&nbsp;сервисом авторегистрации",
+						"hint": {
+							"icon": {
+								"name": "24/question"
+							},
+							"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quae?",
+							"theme": "white"
+						}
+					}
+				]
+			},
+			{
+				"title": "Подключаете кассу",
+				"list": [
+					{
+						"text": "Активация в личном кабинете АТОЛ&nbsp;Онлайн"
+					},
+					{
+						"text": "Подключение к вашей CMS",
+						"hint": {
+							"icon": {
+								"name": "24/question"
+							},
+							"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, quae?",
+							"theme": "white"
+						}
+					}
+				]
+			}
+		]
+	},
+	"noticeBlock": {
+		"icon": {
+			"name": "64/check",
+			"size": "64"
+		},
+		"heading": "Поздравляем!<br>Ваша касса работает!",
+		"image": {
+			"src": "tmp/connection-steps/image-1.png",
+			"alt": "image alt"
+		}
+	},
+	"sliderNews": {
+		"heading": {
+			"title": "Блог",
+			"text": "Мы знаем о облачных кассах всё и делимся с вами знаниями"
+		},
+		"slides": [
+			{
+				"id": "card-news-1",
+				"href": "javascript:void(0);",
+				"badge": {
+					"text": "новости"
+				},
+				"image": {
+					"src": "tmp/cards/card-news/image-1.jpg",
+					"alt": "image alt"
+				},
+				"date": "25 мая 2022 ",
+				"title": "Как принимать оплату интернет-магазину с&nbsp;доставкой"
+			},
+			{
+				"id": "card-news-2",
+				"href": "javascript:void(0);",
+				"badge": {
+					"text": "статьи"
+				},
+				"image": {
+					"src": "tmp/cards/card-news/image-2.jpg",
+					"alt": "image alt"
+				},
+				"date": "25 мая 2022 ",
+				"title": "Как принимать оплату при торговле на сторонних площадках: маркетплейсах, агрегаторах и биржах"
+			},
+			{
+				"id": "card-news-3",
+				"href": "javascript:void(0);",
+				"badge": {
+					"text": "кейсы"
+				},
+				"image": {
+					"src": "tmp/cards/card-news/image-3.jpg",
+					"alt": "image alt"
+				},
+				"date": "25 мая 2022 ",
+				"title": "Комплексная автоматизация товародвижения с использованием мобильных терминалов сбора данных в «Zolla»"
+			}
+		],
+		"actions": [
+			{
+				"href": "javascript:void(0);",
+				"text": "Перейти в блог",
+				"title": "Перейти в блог",
+				"theme": "line"
+			}
+		]
+	}
+}
