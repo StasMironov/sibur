@@ -1,0 +1,22 @@
+.tabs {
+	$root: &;
+
+	&__item {
+		width: auto;
+
+		&:not(:last-child) {		
+		}
+
+		&:focus {outline: none !important;}
+	}
+
+	.swiper-container {
+		overflow: visible;
+	}
+
+	&--horizontal {
+		.swiper-wrapper {
+			flex-direction: row;
+		}
+	}
+}

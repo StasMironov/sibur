@@ -37,7 +37,6 @@ export default {
 				
 				let inputEl = $(hint).closest('.input-shell')
 				inputEl.removeClass('active');
-				console.log(inputEl);
 			});
 		}
 	}

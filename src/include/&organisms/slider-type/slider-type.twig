@@ -1,4 +1,4 @@
-<div class="slider-type" data-slider-type>
+<div {% if slider.scroll_target %}id="{{slider.scroll_target}}"{% endif %} class="slider-type" data-slider-type>
 
 	<div class="slider-type__heading container">
 		{% if slider.title %}
