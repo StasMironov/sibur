@@ -3,8 +3,11 @@
 	itemtype="http://schema.org/BlogPosting">
     <div class="card-type__top">
         {% if card.title %}
-            <div class="card-type__title" itemprop="headline">
-                {{card.title.text}}
+            <div class="card-type__box">
+                
+                <div class="card-type__title" itemprop="headline">
+                    {{card.title.text}}
+                </div>
 
                 {% if card.title.sup %}
                     <sup class="card-type__title-sup">

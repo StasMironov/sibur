@@ -11,6 +11,7 @@ import { devices } from './utils/breakpoints';
 import input from './components/input';
 import hint from './components/hint';
 import sliders from './components/sliders/index';
+import scroll from './components/scroll'
 
 window.UPB = window.UPB || {};
 window.breakpoints = devices;
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	input.init();
 	hint.init();
 	sliders.init();
+	scroll.init();
 });
 
 window.addEventListener('reinit', () => {

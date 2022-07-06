@@ -1,0 +1,20 @@
+.block-navigate {
+    min-height: rem(56);
+    @include text-lead;
+
+    &__container {
+        padding-top: rem(16);
+        padding-bottom: rem(16);
+    }
+
+    &__block {
+        &.scrolled {
+            position: fixed;
+            bottom: 0;
+            background: $color-white;
+            box-shadow: 0px rem(-8) rem(16) rgba(0, 0, 0, 0.08);
+            width: 100%;
+            z-index: 100;
+        }
+    }
+}

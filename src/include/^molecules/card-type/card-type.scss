@@ -11,15 +11,22 @@
 
     &__top {
         padding: rem(32);
-        min-height: rem(148);
+        height: rem(148);
+        overflow: hidden;
 
         @include media-breakpoint-up(md) {
             padding: rem(40);
-            min-height: rem(217);
+            height: rem(217);
         }
     }
 
+    &__box {
+        display: flex;
+    }
+
     &__title {
+        max-width: rem(263);
+
         &-sup {
             @include text-body;
             top: rem(-3);

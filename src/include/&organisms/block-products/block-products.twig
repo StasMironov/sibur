@@ -1,4 +1,4 @@
-<div class="block-products">
+<div class="block-products" {% if block.scroll_target %}id="{{block.scroll_target}}"{% endif %}>
     <div class="block-products__container container">
         {% if block.heading %}
             {% view '^heading' with {

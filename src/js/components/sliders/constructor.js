@@ -50,8 +50,6 @@ export default class Slider {
 			}
 
 			if (this.paginationSelector) {
-
-				console.log(wrap.querySelector(this.paginationSelector));
 				if (this.options.pagination) {
 					this.options.pagination.el = wrap.querySelector(this.paginationSelector);
 				}
