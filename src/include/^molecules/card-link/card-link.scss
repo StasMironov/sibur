@@ -1,0 +1,40 @@
+.card-link {
+    display: block;
+    width: 100%;
+    @include h4;
+    background-color: $color-white;
+    @include defaultTransition(background-color);
+    min-height: rem(120);
+    padding: rem(46) rem(24);
+    
+
+    @include media-breakpoint-up(md) {
+        padding: rem(40);
+        min-height: rem(324);
+    }
+
+    @include media-breakpoint-only(md) {
+        min-height: rem(340);
+    }
+
+    @include hover {
+        background-color: $color-green-light;
+    }
+
+    &:active {
+        background-color: $color-green-light;
+    }
+
+    &__text {
+        max-width: rem(150);
+
+        @include media-breakpoint-down(sm) {
+            max-width: initial;
+        }
+    }
+
+    &.active {
+        pointer-events: none;
+        background-color: $color-green-light;
+    }
+}

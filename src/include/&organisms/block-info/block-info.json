@@ -25,7 +25,8 @@
 			},
 			"title": "Button",
 			"text": "Купить продукцию",
-			"background": "green"
+			"theme": "white",
+			"background": "greenlight"
 		}
     }
 }

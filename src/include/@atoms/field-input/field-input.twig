@@ -10,6 +10,12 @@
 		{% if field.value %} value="{{ field.value }}"{% endif %}
 		{% if field.readonly %} readonly{% endif %}
 		{% if field.attr %} {{ field.attr }}{% endif %}>
+	{% if field.label %}
+        {% view '@field-label' with {
+            field: field
+        } %}
+    {% endif %}
+
 	{% if field.hint %}
 		<div class="input-hint">
 			{% view '@hint' with {
@@ -18,3 +24,4 @@
 		</div>
 	{% endif %}
 </div>
+

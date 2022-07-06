@@ -56,6 +56,16 @@
 			}
 		}
 
+		#{$root}--bg-green & {
+			@include hover {
+				color: $color-green-light;
+			}	
+
+			&:active {
+				color: $color-green-light;
+			}
+		}
+
 		.icon {
 			width: rem(40);
 			height: rem(40);

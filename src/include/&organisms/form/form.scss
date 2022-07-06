@@ -1,0 +1,112 @@
+.form {
+	$root: &;
+	position: relative;
+
+	&__wrapper {
+		
+		margin-left: auto;
+		width: 100%;
+		box-sizing: content-box;
+		max-width: initial;
+		
+
+		@include media-breakpoint-up(md) {
+			padding: rem(80) rem(222) rem(88) rem(80);
+			max-width: rem(434);
+        }
+
+		@include media-breakpoint-only(md) {
+			padding: 0;
+			max-width: initial;
+		}
+	}
+
+	&__title {
+        @include h3;
+        margin-bottom: rem(11);
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem(13);
+        }
+
+		@include media-breakpoint-down(sm) {
+            margin-bottom: rem(5);
+        }
+
+        &-line {
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+	&__background {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		left: 0;
+		clip-path: ellipse(68% 54% at 26% 50%);
+
+		@include media-breakpoint-down(md) {
+            display: none;
+        }
+	}
+
+	&__info {
+		// margin-bottom: rem(13);
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(6);
+        }
+	}
+
+	&__field {
+		&:not(:last-child){
+			margin-bottom: rem(4);
+		}
+	}
+
+	&__fields {
+		margin-bottom: rem(32);
+	}
+
+	&__agreement {
+		color: $color-opacity-dark;
+		margin-bottom: rem(32);
+		max-width: rem(268);
+	}
+
+	&__answer {
+		display: none;
+		max-width: rem(400);
+		width: 100%;
+		margin-right: auto;
+		color: $color-white;
+
+		#{$root}.is-sent & {
+			display: block;
+		}
+
+		& > :last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__answer-title {
+		margin-bottom: rem(45);
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(45);
+		}
+	}
+
+	&__answer-message {
+		margin-bottom: rem(16);
+		max-width: rem(220);
+	}
+
+	&__answer-caption {
+		color: rgba($color-black, 0.5);
+		max-width: rem(240);
+	}
+}

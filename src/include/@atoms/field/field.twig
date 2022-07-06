@@ -1,7 +1,7 @@
 <div class="field{{ field.type=='hidden' ? ' field--hidden' : '' }}{{ field.required ? ' field--required' : '' }}{% if field.theme %} field--theme-{{ field.theme }}{% endif %}">
-	{% if field.label %}
+	{# {% if field.label %}
 		<label for="{{ field.id }}" class="field__label">{{ field.label }}</label>
-	{% endif %}
+	{% endif %} #}
 	<div class="field__control">
 		{% if field.input or field.type=='hidden' %}
 			{% view '@field-input' with {

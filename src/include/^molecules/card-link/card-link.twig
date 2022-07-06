@@ -1,0 +1,7 @@
+<a {% if card.href %}href={{card.href}}{% endif %} class="card-link{{ card.active? ' active' : '' }}">
+    {% if card.text %}
+        <div class="card-link__text">
+            {{ card.text }}
+        </div>
+    {% endif %}
+</a>

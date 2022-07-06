@@ -25,5 +25,34 @@ export default {
 
 			input.setAttribute('data-initialize', '');
 		}
+
+		const textareaEls = document.querySelectorAll('textarea');
+
+		
+
+		for (let i = 0; i < textareaEls.length; i++) {
+			const textarea = textareaEls[i];
+
+			console.log(textarea);
+
+			if (textarea.hasAttribute('data-initialize')) continue;
+
+			if (textarea.value) {
+				textarea.classList.add('filled');
+			}
+
+			textarea.addEventListener('input', throttle(300, (e) => {
+				const value = e.target.value;
+				console.log(value);
+
+				if (value) {
+					textarea.classList.add('filled')
+				} else {
+					textarea.classList.remove('filled')
+				}
+			}));
+
+			textarea.setAttribute('data-initialize', '');
+		}
 	}
 };

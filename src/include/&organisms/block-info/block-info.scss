@@ -5,7 +5,7 @@
         padding: rem(40) rem(24) rem(48);
         
         @include media-breakpoint-up(md) {
-            padding: rem(56) rem(80) rem(120);
+            padding: rem(60) rem(80) rem(120);
             min-height: rem(472);
         }
 
@@ -19,7 +19,7 @@
         margin-bottom: rem(32);
 
         @include media-breakpoint-up(md) {
-            margin-bottom: rem(47);
+            margin-bottom: rem(42);
             max-width: rem(500);
         }
 

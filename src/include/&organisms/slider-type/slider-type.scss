@@ -23,7 +23,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: rem(23);
+        margin-bottom: rem(35);
 
         @include media-breakpoint-up(md) {
             margin-bottom: rem(42);

@@ -60,26 +60,38 @@
         color: $color-opacity-dark;
 	}
 
-	
-	// red background
-
 	&--bg-greenLight {
+		@include hover {
+			background-color: $color-green;
+			color: $color-white;
+		}
+
+		&:active,
+		&:focus {
+			background-color: $color-green;
+			color: $color-white;
+		}
+	}
+
+	&--green {
+		background-color: $color-green-light;
 
 		@include hover {
 			background-color: $color-green;
 			color: $color-white;
 		}
 
-		&:active {
+		&:active,
+		&:focus {
 			background-color: $color-green;
 			color: $color-white;
 		}
+	}
 
-		&:disabled,
-		&.button--disabled {
-			background-color: $color-white;
-			pointer-events: none;
-			color: $color-opacity-dark;
-		}
+	&:disabled,
+	&.button--disabled {
+		background-color: $color-white;
+		pointer-events: none;
+		color: $color-opacity-dark;
 	}
 }

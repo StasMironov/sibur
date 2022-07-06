@@ -65,12 +65,7 @@
         }
     }
 
-	&:disabled,
-	&--disabled {
-		background-color: $color-white;
-		pointer-events: none;
-        color: $color-opacity-dark;
-	}
+
 
 	// button--line
 
@@ -119,10 +114,33 @@
 		}
 	}
 
+    // theme white
+
+    &--white {
+        background-color: $color-white;
+        color: $color-black;
+
+        @include hover {
+            background-color: $color-green-light;
+            color: $color-black;
+        }
+
+        &:focus {
+            background-color: $color-green-light;
+            color: $color-black;
+            outline: none;
+        }
+    
+        &:active {
+            background-color: $color-green-light;
+            color: $color-black;
+        }
+    }
+
 	// black background
 
-	&--bg-dark {
-
+	&--bg-dark,
+    &--bg-greenlight {
 		&.button-icon--line {
 			color: $color-white;
 			border: 1px solid $color-white;
@@ -211,4 +229,29 @@
             }
 		}
     }
+
+    &--bg-greenlight {
+        @include hover {
+            background-color: $color-green;
+            color: $color-white;
+        }
+
+        &:focus {
+            background-color: $color-green;
+            color: $color-white;
+            outline: none;
+        }
+    
+        &:active {
+            background-color: $color-green;
+            color: $color-white;
+        }
+    }
+
+    &:disabled,
+	&--disabled {
+		background-color: $color-white;
+		pointer-events: none;
+        color: $color-opacity-dark;
+	}
 }

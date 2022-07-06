@@ -1,4 +1,4 @@
-<div class="nav-arrows{% if nav_arrows.theme %} nav-arrows--theme-{{ nav_arrows.theme }}{% endif %}"{% if nav_arrows.attr %} {{ nav_arrows.attr }}{% endif %}>
+<div class="nav-arrows{% if nav_arrows.theme %} nav-arrows--theme-{{ nav_arrows.theme }}{% endif %}{% if nav_arrows.background %} nav-arrows--bg-{{ nav_arrows.background }}{% endif %}"{% if nav_arrows.attr %} {{ nav_arrows.attr }}{% endif %}>
 	{% if not nav_arrows.disable_count %}
 		<div class="nav-arrows__count">
 			{% view '@nav-count' %}

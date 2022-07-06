@@ -1,0 +1,27 @@
+{
+    "block": {
+        "items": [
+            {
+                "href": "!#",
+                "title": "link",
+                "text": "Каталог"
+            },
+            {
+                "href": "!#",
+                "title": "link",
+                "text": "Сервисы"
+            },
+            {
+                "href": "!#",
+                "title": "link",
+                "text": "Контакты"
+            },
+            {
+                "href": "!#",
+                "title": "link",
+                "text": "Купить продукцию",
+                "active": true
+            }
+        ]
+    }
+}

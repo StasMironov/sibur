@@ -1,6 +1,47 @@
 {% extends "layouts::_page.twig" %}
 
 {% block content %}
+	<div class="pt-lg-128 pt-md-128 pt-128 pb-lg-80 pb-md-80 pb-64" >
+		{% view '&hero' with {
+			hero: hero
+		} %}
+	</div>
+
+	<div class="pt-lg-32 pt-md-32 pt-24 pb-lg-72 pb-md-40 pb-24" >
+		{% view '&slider-type' with {
+			slider: sliderType
+		} %}
+	</div>
+
+	<div class="pt-lg-32 pt-md-64 pt-24 pb-lg-64 pb-md-48 pb-40" >
+		{% view '&block-products' with {
+			block: blockProducts
+		} %}
+	</div>
+
+	<div class="pt-lg-32 pt-md-64 pt-40 pb-lg-56 pb-md-48 pb-24" >
+		{% view '&slider-type' with {
+			slider: sliderType2
+		} %}
+	</div>
+
+	<div class="pt-lg-56 pt-md-64 pt-24 pb-lg-56 pb-md-56 pb-40" >
+		{% view '&block-info' with {
+			block: block_info
+		} %}
+	</div>
+
+	<div class="pt-lg-64 pt-md-64 pt-40 pb-lg-56 pb-md-120 pb-80" >
+		{% view '&block-navigation' with {
+			block: block_navigation
+		} %}
+	</div>
+
+	<div class="pt-lg-0 pt-md-80 pt-64 pb-lg-88 pb-md-88 pb-64 bg-white" >
+		{% view '&form' with {
+			form: formCall
+		}%}
+	</div>
 
 	
 

@@ -1,115 +1,13 @@
+@include base-input;
+  
 .input-shell {
 	position: relative;
 }
 
-.input {
-	$root: &;
-
-	display: block;
-	width: 100%;
-	height: rem(40);
-	padding-right: rem(16);
-	background-color: transparent;
-	color: $color-opacity-dark;
-	border: none;
-	border-bottom: 1px solid $color-opacity-dark;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	@include text-body;
-	@include defaultTransition(border-color, color);
-
-
-	&:not(:disabled) {
-		@include hover {
-			color: $color-black;
-			border-color: $color-green-light;
-		}
-	}
-
-	&::placeholder {
-		opacity: 1;
-	}
-
-	&::-ms-clear {
-		display: none;
-	}
-
-	&::-ms-reveal {
-		display: none;
-	}
-
-	&.filled {
-		color: $color-black;
-
-		&:disabled {
-			color: $color-opacity-dark;
-		}
-	}
-
-	&:disabled {
-		opacity: 0.4;
-	}
-
-	
-	&:focus {
-		outline: none;
-		color: $color-black;
-	}
-
-	@at-root .input-shell--color .input--color {
-		color: rgba($color-white, 0.4);
-		border-color: rgba($color-white, 0.4);
-
-		&:not(:disabled) {
-			@include hover {
-				color: $color-white;
-				border-color: $color-white;
-			}
-		}
-
-		&.filled {
-			color: $color-white;
-
-			&:disabled {
-				color: rgba($color-white, 0.4);
-			}
-		}
-
-		&:focus {
-			outline: none;
-			color: $color-white;
-			border-color: $color-white;
-		}
-	}
-
-	&--has-hint {
-		padding-right: rem(48);
-
-		@include media-breakpoint-up(md) {
-			padding-right: rem(56);
-		}
-	}
-
-	&::-webkit-search-decoration,
-	&::-webkit-search-cancel-button,
-	&::-webkit-search-results-button,
-	&::-webkit-search-results-decoration {
-		display: none;
-	}
-}
-
-.input-hint {
+.parsley-errors-list {
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	right: rem(4);
-
-	&:hover {
-		@at-root .input:not(:disabled) {
-			@include hover {
-				color: $color-black;
-			}
-		}
-	}
+	top: 100% ;
+	left: auto;
+	right: 0;
+	color: $color-white;
 }

@@ -61,6 +61,14 @@ h6, .h6 {
 	@include text-label;
 }
 
+.text-label-input {
+	@include text-label-input;
+}
+
 .text-display {
 	@include text-display;
+}
+
+.text-small {
+	@include text-small;
 }
