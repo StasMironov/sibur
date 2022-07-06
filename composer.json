@@ -1,5 +1,5 @@
 {
-  "name": "uplab/atol-online.frontend",
+  "name": "uplab/sibur.frontend",
   "type": "bitrix-d7-template",
   "require": {
     "composer/installers": "~1"
