@@ -31,4 +31,9 @@
 			{% if image.srcset %} srcset="{% for item in image.srcset %}{{ item.src }} {{ item.scale }}x{% if loop.index < image.srcset|length %}, {% endif %}{% endfor %}"{% endif %}
 			{% if image.position %} data-position="{{ image.position }}"{% endif %}>
 	</picture>
+	{% if image.shape %}
+		{% view '@icon' with {
+			icon: image.shape
+		} %}
+	{% endif %}
 {% endif %}
