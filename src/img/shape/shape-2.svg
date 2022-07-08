@@ -1,0 +1,8 @@
+<svg height="0" width="0" class="svg-clip">
+    <defs>
+        <clipPath id="shape-2"  clipPathUnits="objectBoundingBox">
+            <path d="M0 0L194.146 0.499581V596L0 595.5V0Z" fill="white"/>
+            <path d="M495 298.25C495 462.876 360.488 596 194.146 596V0.499581C360.488 0.499588 495 133.624 495 298.25Z" fill="white"/>
+        </clipPath>
+    </defs>
+</svg>
