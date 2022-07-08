@@ -29,5 +29,20 @@
 		display: block;
 		width: 100%;
 		height: 100%;
+
+		#shape-1 {
+			@include media-breakpoint-up(md) {
+				transform: scale(0.0044, 0.00212);
+			}
+
+			@include media-breakpoint-up(lg) {
+				transform: scale(0.0016, 0.00212);
+			}
+		}
+
+		#shape-2 {
+			transform: scale(0.00176, 0.00147);
+		}
+		
 	}
 }

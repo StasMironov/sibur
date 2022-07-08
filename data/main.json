@@ -236,6 +236,10 @@
 						"scale": "1"
 					}
 				]
+			},
+			"shape": {
+				"name": "shape/shape-1",
+				"size": "fit"
 			}
 		},
 		"desc": "Вы можете легко найти необходимые вам продукты по следующим категориям",
@@ -318,7 +322,11 @@
 		],
 		"background": {
 			"src": "tmp/form/bg.jpg",
-			"alt": "alt image"
+			"alt": "alt image",
+			"shape": {
+				"name": "shape/shape-2",
+				"size": "fit"
+			}
 		},
 		"agreement": "Нажимая на кнопку, я соглашаюсь с&nbsp;<a class='link' href='#'>политикой обработки персональных данных</a>",
 		"submit": {

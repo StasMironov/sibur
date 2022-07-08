@@ -3,6 +3,7 @@
         position: relative;
         background-color: $color-green-light;
         padding: rem(40) rem(24) rem(48);
+        overflow: hidden;
         
         @include media-breakpoint-up(md) {
             padding: rem(60) rem(80) rem(120);
@@ -58,11 +59,10 @@
 
         @include media-breakpoint-up(md) {
             display: block;
-            clip-path: ellipse(65% 65% at 65% 50%);
         }
 
-        @include media-breakpoint-only(md) {
-            clip-path: ellipse(97% 50% at 99% 50%);
+        img {
+            clip-path: url($shape-1);
         }
     }
 }
