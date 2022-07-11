@@ -38,8 +38,7 @@
                 "href": true,
                 "scroll_to": "#sector",
                 "text": "Отрасль",
-                "title": "Отрасль",
-				"active": true
+                "title": "Отрасль"
               },
               {
                 "href": true,
