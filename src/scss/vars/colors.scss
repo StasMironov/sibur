@@ -16,6 +16,7 @@ $color-opacity-dark: rgba(#00313C, 0.4);
 $color-opacity-white: #00313c33;
 
 $color-gray: #F5F5F5;
+$color-gray-dark: #ededed;
 
 $colors: (
 	"white": $color-white,
@@ -28,7 +29,8 @@ $colors: (
 	"orange": $color-orange,
 	"opacity-dark": $color-opacity-dark,
 	"opacity-white": $color-opacity-white,
-	"gray": $color-gray
+	"gray": $color-gray,
+	"gray-dark": $color-gray-dark
 );
 
 

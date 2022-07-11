@@ -12,11 +12,10 @@
                     {% endfor %}
                 </div>
             {% endif %}
-            {% if block_info.desc %}
-                <div class="block-info__desc">
-                    {{block_info.desc}}
-                </div>
-            {% endif %}
+
+            <div class="user-text block-info__desc">
+					{{block_info.desc}}
+            </div>
             {% if block_info.action %}
                 <div class="block-info__action">
                     {% view '@button-icon' with {

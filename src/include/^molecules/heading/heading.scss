@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-between;
 	margin-bottom: rem(32);
+	width: 100%;
 
 
 	@include media-breakpoint-up(md) {
@@ -19,6 +20,22 @@
 
 		@include media-breakpoint-up(md) {
 			display: block;
+		}
+	}
+
+	&__link {
+		@include defaultTransition(color);
+
+		@include hover {
+			color: $color-green;
+		}
+	
+		&:active {
+			color: $color-green;
+		}
+	
+		&:focus {
+			color: $color-green;
 		}
 	}
 }

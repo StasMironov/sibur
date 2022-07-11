@@ -1,11 +1,11 @@
-<div {% if slider.scroll_target %}id="{{slider.scroll_target}}"{% endif %} class="slider-type" data-slider-type>
+<div {% if slider.scroll_target %}id="{{slider.scroll_target}}"{% endif %} {% if slider.attr %} {{slider.attr}}{% endif %} class="slider-type" data-slider-type>
 
 	<div class="slider-type__heading container">
-		{% if slider.title %}
-			<h3 class="slider-type__title">
-				{{slider.title}}
-			</h3>
-		{% endif %}
+		{% if slider.heading %}
+            {% view '^heading' with {
+                heading: slider.heading
+            } %}
+        {% endif %}
 
 		{% if slider.action %}
 			<div class="slider-type__action">

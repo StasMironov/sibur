@@ -1,6 +1,14 @@
 <div class="heading">
+
 	{% if heading.title %}
-		<h3 class="heading__title h3">{{ heading.title }}</h3>
+		{% if heading.link %}
+			<a href={{heading.link.href}} class="heading__link">
+				<h3 class="heading__title h3">{{ heading.title }}</h3>
+			</a>
+		{% else %}
+			<h3 class="heading__title h3">{{ heading.title }}</h3>
+		{% endif %}
+			
 	{% endif %}
 	{% if heading.action %}
 		<div class="heading__action">

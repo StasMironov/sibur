@@ -59,6 +59,11 @@
 
         @include media-breakpoint-up(md) {
             display: block;
+            max-width: rem(656);
+        }
+
+        @include media-breakpoint-only(md) {
+            max-width: rem(220);
         }
 
         img {
