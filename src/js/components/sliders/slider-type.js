@@ -11,6 +11,7 @@ export default {
 			slider: '[data-slider]',
 			prev: '[data-nav-arrow-prev]',
 			next: '[data-nav-arrow-next]',
+			iOSEdgeSwipeDetection: true,
 			options: {
 				slidesPerView: 1,
 				loop: false,
@@ -30,9 +31,6 @@ export default {
 					},
 					[window.breakpoints.md]: {
 						slidesPerView: 2
-					},
-					[window.breakpoints.sm]: {
-						init: false
 					}
 				}
 			},

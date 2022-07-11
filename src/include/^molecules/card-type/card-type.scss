@@ -9,6 +9,10 @@
 		background-color: $color-green-light;
 	}
 
+    &__bottom {
+        background-color: $color-gray-dark;
+    }
+
     &__top {
         padding: rem(32);
         height: rem(148);
@@ -29,13 +33,15 @@
 
         &-sup {
             @include text-body;
-            top: rem(-3);
-            left: rem(4);
-
+            top: 0;
+            left: rem(8);
 
             @include media-breakpoint-up(md) {
-                top: rem(-8);
-                left: rem(2);
+                left: rem(9);
+            }
+
+            @include media-breakpoint-only(md) {
+                left: rem(7);
             }
         }
     }

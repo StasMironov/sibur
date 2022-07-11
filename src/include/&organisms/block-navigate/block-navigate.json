@@ -1,24 +1,27 @@
 {
     "block": {
-        "tabs": {
-            "items": [
-              {
-                "href": true,
-                "scroll_to": "#production",
-                "text": "Устойчивое производство",
-                "title": "Устойчивое производство",
-                "active": "true",
-                "theme": "white-2",
-                "unique": true
-              },
-              {
-                "href": true,
-                "scroll_to": "#sector",
-                "text": "R&D и Инновации",
-                "title": "R&D и Инновацииы",
-                "theme": "white-2"
-              }
-            ]
+      "tabs": {
+        "items": [
+          {
+            "href": true,
+            "scroll_to": "#sector",
+            "text": "Отрасль",
+            "title": "Отрасль",
+            "active": true
+          },
+          {
+            "href": true,
+            "scroll_to": "#group",
+            "text": "Группа продуктов",
+            "title": "Группа продуктов"
+          },
+          {
+            "href": true,
+            "scroll_to": "#method",
+            "text": "Метод переработки",
+            "title": "Метод переработки"
           }
+        ]
+      }
     }
 }

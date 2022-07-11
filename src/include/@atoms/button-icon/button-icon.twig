@@ -4,11 +4,11 @@
 			<span class="button-icon__text text-body-medium">{{ button.text }}</span>
 		{% endif %}
         {% if button.icon %}
-            <div class="button-icon__icon">
+            <span class="button-icon__icon">
                 {% view '@icon' with {
                     icon: button.icon
                 } %}
-            </div>
+            </span>
         {% endif %}
 	</div>
 {% else %}
@@ -18,11 +18,11 @@
 			{% if button.text %}
 				<span class="button-icon__text text-body-medium">{{ button.text }}</span>
 			{% endif %}
-            <div class="button-icon__icon">
+            <span class="button-icon__icon">
                 {% view '@icon' with {
                     icon: button.icon
                 } %}
-            </div>
+            </span>
 		</a>
 	{% else %}
 		<button type="{{ button.type?: 'button' }}"
@@ -30,11 +30,11 @@
 			{% if button.text %}
 				<span class="button-icon__text text-body-medium">{{ button.text }}</span>
 			{% endif %}
-            <div class="button-icon__icon">
+            <span class="button-icon__icon">
                 {% view '@icon' with {
                     icon: button.icon
                 } %}
-            </div>
+            </span>
 		</button>
 	{% endif %}
 {% endif %}

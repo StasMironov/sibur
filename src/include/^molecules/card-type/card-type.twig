@@ -1,11 +1,10 @@
 <a{% if card.id %} id="{{ card.id }}"{% endif %}{% if card.href %} href="{{ card.href }}"{% endif %}
-	class="card-type"{% if card.attr %} {{ card.attr }}{% endif %} itemprop="blogPosts" itemscope
-	itemtype="http://schema.org/BlogPosting">
+	class="card-type"{% if card.attr %} {{ card.attr }}{% endif %}>
     <div class="card-type__top">
         {% if card.title %}
             <div class="card-type__box">
                 
-                <div class="card-type__title" itemprop="headline">
+                <div class="card-type__title">
                     {{card.title.text}}
                 </div>
 
