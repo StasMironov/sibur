@@ -1,6 +1,10 @@
 .block-info {
+    $root: &;
+
     &__content {
         position: relative;
+        display: flex;
+        flex-direction: column;
         background-color: $color-green-light;
         padding: rem(40) rem(24) rem(48);
         overflow: hidden;
@@ -8,11 +12,27 @@
         @include media-breakpoint-up(md) {
             padding: rem(60) rem(80) rem(120);
             min-height: rem(472);
+
+            #{$root}--layout-2 & {
+                padding: rem(65) rem(80) rem(65);
+            }
         }
 
         @include media-breakpoint-only(md) {
             padding: rem(64) rem(60) rem(72);
-        }    
+
+            #{$root}--layout-2 & {
+                padding: rem(64) rem(61) rem(64);
+            }
+        } 
+        
+
+        @include media-breakpoint-down(sm) {
+            #{$root}--layout-2 & {
+                min-height: rem(370);
+                padding: rem(47) rem(24) rem(49);
+            }
+        }
     }
 
     &__title {
@@ -33,6 +53,11 @@
             span {
                 font-weight: 700;
             }
+        }
+
+        #{$root}--layout-2 & {
+            margin-top: auto;
+            margin-bottom: 0;
         }
     }
 

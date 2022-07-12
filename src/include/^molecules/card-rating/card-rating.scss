@@ -1,0 +1,38 @@
+.card-rating {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    padding: rem(41) rem(40) rem(35);
+    min-height: rem(328);
+
+    @include media-breakpoint-only(md) {
+        padding: rem(31) rem(40) rem(35);
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: inline-flex;
+        width: rem(102);
+        height: rem(30);
+    }
+
+    &__bottom {
+        margin-top: auto;
+    }
+
+    &__graph {
+        width: rem(99);
+    }
+
+    &__right {
+       padding-top: rem(4);
+    }
+
+    &__txt {
+        margin-bottom: rem(16);
+    }
+}

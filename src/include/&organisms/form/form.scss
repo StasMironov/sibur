@@ -45,6 +45,7 @@
 		left: 0;
 		overflow: hidden;
 		max-width: rem(614);
+		height: rem(598);
 
 		@include media-breakpoint-down(md) {
             display: none;
