@@ -1,9 +1,14 @@
-<div class="block-info">
+<div class="block-info{% if block_info.layout %} block-info--layout-{{block_info.layout}} {% endif %}">
     <div class="block-info__container container ">   
         
         <div class="block-info__content">
             {% if block_info.title_hidden %}
                 <h3 class="visually-hidden">{{block_info.title_hidden}}</h3>
+            {% endif %}
+            {% if block_info.label %}
+                <div class="block-info__label text-label">
+                    {{block_info.label}}
+                </div>
             {% endif %}
             {% if block_info.title %}
                 <div class="block-info__title">

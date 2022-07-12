@@ -1,0 +1,202 @@
+{
+	"title": "О компании",
+    "sliderType": {
+		"heading": {
+			"title": "Отрасль",
+			"link": {
+				"href": "javascript:void(0);"
+			},
+			"action": {
+				"href": "javascript:void(0);",
+				"text": "Смотреть все",
+				"title": "Смотреть все",
+				"theme": "green"
+			}
+		},
+		"slides": [
+			{
+				"id": "card-type-1",
+				"href": "javascript:void(0);",
+				"image": {
+					"src": "tmp/cards/card-type/image-4.png",
+					"alt": "image alt"
+				},
+				"title": {
+					"text": "Упаковка",
+					"sup": "128"
+				}
+			},
+			{
+				"id": "card-type-2",
+				"href": "javascript:void(0);",
+				"image": {
+					"src": "tmp/cards/card-type/image-2.jpg",
+					"alt": "image alt"
+				},
+				"title": {
+					"text": "Строительство",
+					"sup": "128"
+				}
+			},
+			{
+				"id": "card-type-3",
+				"href": "javascript:void(0);",
+				"image": {
+					"src": "tmp/cards/card-type/image-3.jpg",
+					"alt": "image alt"
+				},
+				"title": {
+					"text": "Медицина",
+					"sup": "128"
+				}
+			},
+			{
+				"id": "card-type-4",
+				"href": "javascript:void(0);",
+				"image": {
+					"src": "tmp/cards/card-type/image-3.jpg",
+					"alt": "image alt"
+				},
+				"title": {
+					"text": "Упаковка2",
+					"sup": "128"
+				}
+			},
+			{
+				"id": "card-type-5",
+				"href": "javascript:void(0);",
+				"image": {
+					"src": "tmp/cards/card-type/image-1.jpg",
+					"alt": "image alt"
+				},
+				"title": {
+					"text": "Упаковка 33",
+					"sup": "128"
+				}
+			}
+		],
+		"scroll_target": "sector",
+		"attr": "data-section",
+		"action": {
+			"href": "javascript:void(0);",
+			"text": "Смотреть все",
+			"title": "Смотреть все",
+			"theme": "green"
+		}
+	},
+    "block_info": {
+        "layout": "2",
+        "title_hidden": "Вместе создаем лучшее будущее для людей и планеты",
+		"title": [
+            "Вместе создаем",
+			"<span>лучшее будущее</span>",
+			"для людей и&nbsp;планеты"
+		],
+        "background": {
+			"src": "tmp/blocks/block-info/bg-about.jpg",
+			"alt": "alt image",
+			"tab": {
+				"srcset": [
+					{
+						"src": "tmp/blocks/block-info/bg-about.jpg",
+						"scale": "1"
+					}
+				]
+			},
+			"shape": {
+				"name": "shape/shape-1",
+				"size": "fit"
+			}
+		},
+		"label": "Наша миссия"
+    },
+	"block_navigation": {
+        "items": [
+            {
+                "href": "!#",
+                "title": "link",
+                "text": "Каталог"
+            },
+            {
+                "href": "!#",
+                "title": "link",
+                "text": "Сервисы"
+            },
+            {
+                "href": "!#",
+                "title": "link",
+                "text": "Контакты"
+            },
+            {
+                "href": "!#",
+                "title": "link",
+                "text": "Купить продукцию",
+                "active": true
+            }
+        ]
+    },
+	"formCall": {
+		"id": "form-1",
+		"name": "form-1",
+		"method": "POST",
+		"action": "/ajax/contacts/?repo=atol-education.frontend&status=success",
+		"attr": "data-ajax-form",
+		"title_hidden": "Оптимальные решения для партнеров",
+		"title": [
+			"Оставьте",
+			"<span>заявку</span>"
+		],
+		"fields": [
+			{
+				"input": true,
+				"id": "form-1-input-1",
+				"name": "form-1-input-1",
+				"required": true,
+				"label": "ФИО"
+			},
+			{
+				"input": true,
+				"id": "form-1-input-2",
+				"name": "form-1-input-2",
+				"required": true,
+				"label": "Компания"
+			},
+			{
+				"input": true,
+				"id": "form-1-input-3",
+				"name": "form-1-input-3",
+				"required": true,
+				"label": "E-mail"
+			},
+			{
+				"input": true,
+				"id": "form-1-input-4",
+				"name": "form-1-input-4",
+				"required": true,
+				"type": "tel",
+				"label": "Телефон"
+			},
+			{
+				"textarea": true,
+				"id": "form-1-textarea-5",
+				"name": "form-1-textarea-5",
+				"label": "Комментарий"
+			}
+		],
+		"background": {
+			"src": "tmp/form/bg.jpg",
+			"alt": "alt image",
+			"shape": {
+				"name": "shape/shape-2",
+				"size": "fit"
+			}
+		},
+		"agreement": "Нажимая на кнопку, я соглашаюсь с&nbsp;<a class='link' href='#'>политикой обработки персональных данных</a>",
+		"submit": {
+			"type": "submit",
+			"text": "Отправить заявку",
+			"title": "Отправить заявку",
+			"theme": "green"
+		}
+	}
+}

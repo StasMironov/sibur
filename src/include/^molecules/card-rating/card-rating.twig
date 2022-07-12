@@ -1,0 +1,40 @@
+<div class="card-rating">
+    <div class="card-rating__top">
+        <div class="card-rating__left">
+            {% if card.rating %}
+                <div class="card-rating__rating">
+                    {% if card.rating.txt %}
+                        <div class="card-rating__txt text-number">
+                            {{card.rating.txt}}
+                        </div>
+                    {% endif %}
+                    {% if card.rating.sub %}
+                        <div class="card-rating__sub">
+                            {{card.rating.sub}}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+
+            
+        </div>
+        <div class="card-rating__right">
+            {% if card.rating.graph %}
+                <div class="card-rating__graph">
+                    {% view '@image' with {
+                        image: card.rating.graph
+                    } %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="card-rating__bottom">
+        {% if card.logo %}
+            <div class="card-rating__logo">
+                {% view '@image' with {
+                    image: card.logo
+                } %}
+            </div>
+        {% endif %}
+    </div>
+</div>

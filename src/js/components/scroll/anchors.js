@@ -24,8 +24,7 @@ export default {
                 trigger:section,
                 start:"top-=90 center",
                 end:"bottom center",
-                toggleClass:{targets: tabs[index], className:"tab--active"},
-              //  onEnter: () => tabs[index].scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})
+                toggleClass:{targets: tabs[index], className:"tab--active"}
             })
 
             ScrollTrigger.create({
@@ -33,7 +32,11 @@ export default {
                 start:"top-=90 center",
                 end:"bottom center",
                 toggleClass:{targets: tabsStatic[index], className:"tab--active"},
-              //  onEnter: () => tabsStatic[index].scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})
+                onLeaveBack:(item) => {
+                  if(index==0){
+                    tabsStatic[index].classList.add('tab--active')
+                  }
+                }
               })
         })
 
