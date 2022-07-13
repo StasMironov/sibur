@@ -5,18 +5,39 @@
                 heading: block.heading
             } %}
         {% endif %}
-        <div class="block-significant__wrap">
-            <div class="block-significant__graph">
+
+        <div class="block-significant__cover">
+            <div class="block-significant__wrap">
+                <div class="block-significant__graph">
+                    <div class="block-significant__triangle">
+                    </div>
+                    <div class="block-significant__triangle">
+                    </div>
+                    <div class="block-significant__triangle">
+                    </div>
+                </div>
+
+                <div class="block-significant__img">
+                    {% view '@image' with {
+                        image: block.img
+                    } %}
+                </div>
             </div>
 
-            <div class="block-significant__img">
-            </div>
-        </div>
-
-        <div class="block-significant__desc">
-            <div class="block-significant__icon">
-            </div>
-            <div class="block-significant__txt">
+            <div class="block-significant__desc">
+                {% if block.icon %}
+                    <div class="block-significant__icon">
+                        {% view '@icon' with {
+                            icon: block.icon
+                        } %}
+                    </div>
+                {% endif %}
+                
+                {% if block.txt %}
+                    <div class="block-significant__txt">
+                        {{block.txt}}
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
