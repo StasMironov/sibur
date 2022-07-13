@@ -1,5 +1,10 @@
 <div class="heading">
 
+	{% if heading.label %}
+		<div class="heading__label text-label">
+			{{heading.label}}
+		</div>
+	{% endif %}
 	{% if heading.title %}
 		{% if heading.link %}
 			<a href={{heading.link.href}} class="heading__link">
