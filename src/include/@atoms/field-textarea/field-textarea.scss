@@ -23,6 +23,10 @@
 	line-height: rem(24);
 	@include defaultTransition(border-color, color);
 	resize: none;
+	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	-webkit-border-radius:0px;
+	-webkit-appearance:none
 	
 	&:not(:disabled) {
 		@include hover {

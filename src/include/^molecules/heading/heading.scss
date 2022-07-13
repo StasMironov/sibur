@@ -9,6 +9,11 @@
 	&--basic {
 		justify-content: initial;
 		align-items: normal;
+		margin-bottom: rem(64);
+
+		@include media-breakpoint-down(md) {
+			flex-direction: column;
+		}
 	}
 
 	@include media-breakpoint-up(md) {
@@ -21,6 +26,10 @@
 
 	@include media-breakpoint-only(md) {
 		margin-bottom: rem(40);
+
+		@at-root .heading--basic {
+			margin-bottom: rem(96);
+		}
 	}
 
 	&__title {
@@ -60,13 +69,23 @@
 
 	&__label {
 		max-width: rem(160);
+		margin-bottom: rem(40);
 
 		#{$root}--basic & {
 			padding-top: rem(6);
+
+			@include media-breakpoint-down(md) {
+				padding-top: 0;
+			}
 		}
 
 		@include media-breakpoint-up(md) {
 			margin-right: rem(282);
+		}
+
+		@include media-breakpoint-only(md) {
+			margin-right: 0;
+			margin-bottom: rem(48);
 		}
 	}
 }
