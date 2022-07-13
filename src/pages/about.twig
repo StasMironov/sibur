@@ -2,19 +2,23 @@
 
 {% block content %}
 
-    <div class="pt-lg-40 pt-md-40 pt-24 pb-lg-72 pb-md-40 pb-24" >      
-		{% view '&slider-type' with {
+	<div class="pt-lg-40 pt-md-40 pt-24 pb-lg-72 pb-md-40 pb-24 bg-green-superlight">      
+		{% view '&block-significant' %}
+	</div>
+
+    <div class="pt-lg-40 pt-md-40 pt-24 pb-lg-72 pb-md-40 pb-24 bg-green-superlight">      
+		{% view '&slider-rating' with {
 			slider: sliderType
 		} %}
 	</div>
 
-	<div class="pt-lg-56 pt-md-64 pt-24 pb-lg-56 pb-md-56 pb-40" >
+	<div class="pt-lg-40 pt-md-72 pt-64 pb-lg-56 pb-md-56 pb-40 bg-green-superlight">
 		{% view '&block-info' with {
 			block: block_info
 		} %}
 	</div>
 
-	<div class="pt-lg-64 pt-md-64 pt-40 pb-lg-120 pb-md-120 pb-80" >
+	<div class="pt-lg-64 pt-md-64 pt-40 pb-lg-120 pb-md-120 pb-80 bg-green-superlight">
 		{% view '&block-navigation' with {
 			block: block_navigation
 		} %}

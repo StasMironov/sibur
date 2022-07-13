@@ -7,7 +7,7 @@ export default {
 	init() {
 		const slider = new Slider({
 			init: true,
-			wrap: '[data-slider-type]',
+			wrap: '[data-slider-rating]',
 			slider: '[data-slider]',
 			prev: '[data-nav-arrow-prev]',
 			next: '[data-nav-arrow-next]',
