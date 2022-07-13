@@ -1,5 +1,23 @@
 <div class="block-significant">
     <div class="block-significant__container container">
-        Test
+        {% if block.heading %}
+            {% view '^heading' with {
+                heading: block.heading
+            } %}
+        {% endif %}
+        <div class="block-significant__wrap">
+            <div class="block-significant__graph">
+            </div>
+
+            <div class="block-significant__img">
+            </div>
+        </div>
+
+        <div class="block-significant__desc">
+            <div class="block-significant__icon">
+            </div>
+            <div class="block-significant__txt">
+            </div>
+        </div>
     </div>
 </div>

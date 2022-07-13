@@ -1,11 +1,20 @@
-<div class="heading">
-
+<div class="heading{% if heading.layout %} heading--{{heading.layout}}{% endif %}">
+	{% if heading.title_hidden %}
+		<h3 class="visually-hidden">{{heading.title_hidden}}</h3>
+	{% endif %}
 	{% if heading.label %}
 		<div class="heading__label text-label">
 			{{heading.label}}
 		</div>
 	{% endif %}
-	{% if heading.title %}
+	{% if heading.title_row and heading.title %}
+		<div class="heading__title">
+			{% for title in heading.title %}
+				<div class="heading__title-line">{{ title }}</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+	{% if heading.title and not heading.title_row %}
 		{% if heading.link %}
 			<a href={{heading.link.href}} class="heading__link">
 				<h3 class="heading__title h3">{{ heading.title }}</h3>
@@ -13,7 +22,6 @@
 		{% else %}
 			<h3 class="heading__title h3">{{ heading.title }}</h3>
 		{% endif %}
-			
 	{% endif %}
 	{% if heading.action %}
 		<div class="heading__action">

@@ -18,18 +18,18 @@
     }
 
     &__heading {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: rem(63);
+        // display: flex;
+        // flex-direction: column;
+        // margin-bottom: rem(63);
         
-        @include media-breakpoint-up(md) {
-            margin-bottom: rem(96);
-            flex-direction: row;
-        }
+        // @include media-breakpoint-up(md) {
+        //     margin-bottom: rem(96);
+        //     flex-direction: row;
+        // }
 
-        @include media-breakpoint-only(md) {
-            flex-direction: column;
-        }   
+        // @include media-breakpoint-only(md) {
+        //     flex-direction: column;
+        // }   
     }
 
     

@@ -20,7 +20,7 @@
 	-moz-appearance: none;
 	appearance: none;
 	@include text-body;
-	line-height: rem(37);
+	line-height: rem(24);
 	@include defaultTransition(border-color, color);
 	resize: none;
 	

@@ -1,21 +1,12 @@
 <div {% if slider.scroll_target %}id="{{slider.scroll_target}}"{% endif %} {% if slider.attr %} {{slider.attr}}{% endif %} class="slider-rating" data-slider-rating>
 
 	<div class="slider-rating__heading container">
-		{% if slider.label %}
-            <div class="slider-rating__label text-label"> 
-                {{slider.label}}
-            </div>
-        {% endif %}
-        {% if slider.title %}
-            <div class="slider-rating__title">
-                {% for title in slider.title %}
-                    <div class="slider-rating__title-line">{{ title }}</div>
-                {% endfor %}
-            </div>
+		{% if slider.heading %}
+            {% view '^heading' with {
+                heading: slider.heading
+            } %}
         {% endif %}
 	</div>
-	
-
 	<div class="slider-rating__content">
 		<div class="slider-rating__container container">
 			<div class="slider-rating__base">

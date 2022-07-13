@@ -1,17 +1,36 @@
 .heading {
+	$root: &;
 	display: flex;
     align-items: center;
     justify-content: space-between;
 	margin-bottom: rem(32);
 	width: 100%;
 
+	&--basic {
+		justify-content: initial;
+		align-items: normal;
+	}
 
 	@include media-breakpoint-up(md) {
 		margin-bottom: rem(43);
+
+		@at-root .heading--basic {
+			margin-bottom: rem(96);
+		}
 	}
 
 	@include media-breakpoint-only(md) {
 		margin-bottom: rem(40);
+	}
+
+	&__title {
+		@include h3;
+
+		&-line {
+            span {
+                font-weight: 700;
+            }
+        }
 	}
 
 	&__action {
@@ -36,6 +55,18 @@
 	
 		&:focus {
 			color: $color-green;
+		}
+	}
+
+	&__label {
+		max-width: rem(160);
+
+		#{$root}--basic & {
+			padding-top: rem(6);
+		}
+
+		@include media-breakpoint-up(md) {
+			margin-right: rem(282);
 		}
 	}
 }
