@@ -21,5 +21,69 @@
 			"equal": "Пароль не совпадает",
 			"pattern": "Неверное значение"
 		}
-	}
+	},
+  "footer": {
+    "base": {
+      "logo": {
+        "icon": {
+          "name": "logo",
+          "size": "fit"
+        },
+        "href": "javascript:void(0);"
+      },
+      "links": [
+        {
+          "href": "javascript:void(0);",
+          "text": "Каталог"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "О компании"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "Сервисы"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "Контакты"
+        }
+      ],
+      "actions": [
+        {
+          "icon": {
+            "name": "24/arrow",
+            "size": "24"
+          },
+          "text": "Перейти на sibur.ru",
+          "title": "Button",
+          "theme": "line",
+          "href": "javascript:void(0);"
+        },
+        {
+          "icon": {
+            "name": "24/arrow",
+            "size": "24"
+          },
+          "text": "Купить продукцию",
+          "href": "javascript:void(0);"
+        }
+      ]
+    },
+    "policy": {
+      "copy": "© 2022 ПАО «СИБУР Холдинг»",
+      "agreement": {
+        "href": "javascript:void(0);",
+        "text": "Политика обработки персональных данных"
+      },
+      "company": {
+        "href": "javascript:void(0);",
+        "text": "Политика обработки персональных данных"
+      },
+      "made_by": {
+				"text": "Cделано в",
+				"href": "!#"
+			}
+    }
+  }
 }

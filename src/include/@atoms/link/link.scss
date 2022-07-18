@@ -8,7 +8,6 @@
 	padding: 0;
 	color: $color-black;
 	@include defaultTransition(color);
-    @include text-small;
 
 	@include hover {
 		color: $color-green;

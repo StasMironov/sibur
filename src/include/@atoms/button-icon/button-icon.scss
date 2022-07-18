@@ -16,6 +16,7 @@
 	white-space: nowrap;
 	@include defaultTransition(background-color, color);
 
+
 	@include hover {
 		background-color: $color-green;
 	}
@@ -59,6 +60,7 @@
 		pointer-events: none;
 		transform: translateY(-50%);
         // @include defaultTransition(color);
+        
 
         @include media-breakpoint-up(md) {
             right: rem(20);

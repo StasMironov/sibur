@@ -434,11 +434,30 @@
 
 		<div class="py-24">
 			<div class="container">
+				<p class="h2 mb-24"><code>@Link-small</code></p>
+
+				<div class="mb-24">
+					<div style="display: flex; flex-wrap: wrap;">
+						{% for link in links_small %}
+							<div class="py-8 px-8">
+								{% view '@link-small' with {
+									field: link
+								} %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="py-24">
+			<div class="container">
 				<p class="h2 mb-24"><code>@Link</code></p>
 
 				<div class="mb-24">
 					<div style="display: flex; flex-wrap: wrap;">
-						{% for link in links %}
+						{% for link in links_small %}
 							<div class="py-8 px-8">
 								{% view '@link' with {
 									field: link
@@ -449,6 +468,8 @@
 				</div>
 			</div>
 		</div>
+
+
 
 		
 

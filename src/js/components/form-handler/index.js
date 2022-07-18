@@ -63,8 +63,6 @@ export default class FormHandler {
 		const answerContainer = this.form.querySelector('[data-form-answer]');
 		if (!answerContainer) return;
 
-		console.log(data);
-
 		if (data.title) {
 			const title = document.createElement('p');
 			title.classList.add('h3');

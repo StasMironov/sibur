@@ -1,0 +1,52 @@
+<footer class="footer" role="contentinfo">
+	<div class="footer__container container">
+		{% if footer.base %}
+			<div class="footer__base">
+				{% if footer.base.logo %}
+					<a {% if footer.base.logo.href %}href={{footer.base.logo.href}}{% endif %}>
+						<span class="footer__logo">
+							{% view '@icon' with {
+								icon: footer.base.logo.icon
+							} %}
+						</span>
+					</a>
+				{% endif %}
+
+				{% if footer.base.links %}
+					<div class="footer__links">
+						{% for link in footer.base.links %}
+							<div class="footer__link">
+								{% view "@link" with {
+									link: link
+								} %}
+							</div>
+						{% endfor %}
+					</div>
+				{% endif %}
+
+				{% if footer.base.actions %}
+					<div class="footer__actions">
+						{% for action in footer.base.actions %}
+							<div class="footer__action">
+								{% view "@button-icon" with {
+									button: action
+								} %}
+							</div>
+						{% endfor %}
+					</div>
+				{% endif %}
+
+
+				<div class="footer__handler">
+					<div class="footer__comp">
+					</div>
+					<div class="footer__comp">
+					</div>
+				</div>
+			</div>
+		{% endif %}
+		
+		<div class="footer__policy">
+		</div>
+	</div>
+</footer>
