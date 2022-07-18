@@ -1,0 +1,126 @@
+.footer {
+	$root: &;
+	display: block;
+	background-color: $color-white;
+	margin-top: auto;
+	border: 1px solid black;
+
+	&__logo {
+		display: block;
+    	width: rem(96);
+		margin-bottom: rem(38);
+		
+
+		@include media-breakpoint-up(md) {
+            width: rem(120);
+			margin-bottom: 0;
+        }
+
+		@include media-breakpoint-down(sm) {
+			grid-area: logo;
+		}
+	}
+
+	&__base {
+		display: grid;
+		align-items: flex-start;
+		
+
+		@include media-breakpoint-up(md) {
+			grid-template-columns: 1fr rem(141) 1fr 1fr;
+			grid-column-gap: rem(129);
+		}
+
+		@include media-breakpoint-only(md) {
+			grid-template-columns: rem(120) rem(108) rem(230);
+			grid-column-gap: rem(90);
+		}
+
+
+		@include media-breakpoint-down(sm) {
+			grid-template-areas: 
+			"logo ."
+			"links	handler"
+			"links	handler"
+			"actions actions";
+			grid-column-gap: rem(24);
+		}
+
+
+		// grid-template-columns: 120px 108px 230px;
+		// grid-column-gap: 90px;
+	}
+
+	&__links {
+		width: max-content;
+		margin-bottom: rem(42);
+
+		@include media-breakpoint-up(md) {
+			justify-self: flex-end;
+			margin-bottom: 0;
+		}
+
+		@include media-breakpoint-down(sm) {
+			grid-area: links;
+		}
+	}
+
+	&__container {
+		padding-top: rem(43);
+		padding-bottom: rem(24);
+
+		@include media-breakpoint-up(md) {
+			padding-top: rem(72);
+			padding-bottom: rem(64);
+		}
+	}
+
+	&__link {
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+	}
+
+	&__actions {
+		@include media-breakpoint-down(sm) {
+			grid-area: actions;
+		}
+	}
+
+	&__action {
+		&:not(:last-child){
+			margin-bottom: rem(24);
+		}
+	}
+
+	&__handler {
+		display: flex;
+		align-items: center;
+		justify-self: flex-end;
+
+		@include media-breakpoint-down(md) {
+			justify-self: flex-start;
+			margin-top: rem(-24);
+		}
+
+		@include media-breakpoint-down(sm) {
+			grid-area: handler;
+			justify-self: flex-end;
+			padding-top: rem(27);
+		}
+
+		
+	}
+
+	&__comp {
+		width: rem(24);
+		height: rem(24);
+		background-color: red;
+
+		&:not(:last-child) {
+			margin-right: rem(32);
+		}
+	}
+
+	
+}

@@ -361,6 +361,17 @@
 			"text": "Полиэтилен"
 		}
 	],
+	"links_small": [
+		{
+			"text": "Читать подробнее",
+			"title": "link-title"
+		},
+		{
+			"href": "javascript:void(0);",
+			"text": "Читать подробнее",
+			"title": "link-title"
+		}
+	],
 	"links": [
 		{
 			"text": "Читать подробнее",

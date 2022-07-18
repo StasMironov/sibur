@@ -23,8 +23,6 @@ export default class ParallaxCard {
 		const wrap = this.wrap;
 		const target = this.target;
 
-		console.log('cards move');
-
 		const tl = gsap.timeline({
 			scrollTrigger: {
 			trigger : wrap,

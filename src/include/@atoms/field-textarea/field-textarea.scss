@@ -26,7 +26,8 @@
 	text-size-adjust: none;
 	-webkit-text-size-adjust: none;
 	-webkit-border-radius:0px;
-	-webkit-appearance:none
+	-webkit-appearance:none;
+	overflow-x: hidden;
 	
 	&:not(:disabled) {
 		@include hover {
