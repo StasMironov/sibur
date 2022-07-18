@@ -1,0 +1,59 @@
+.card-move {
+    $root: &;
+    position: relative;
+    display: flex;
+    width: max-content;
+
+    &__item {
+        width: rem(324);
+        height: rem(324);
+
+        @include media-breakpoint-down(md) {
+            width: rem(340);
+            height: rem(340);
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: rem(214);
+            height: rem(214);
+        }
+
+        &--move {
+            background-color: black;
+            position: absolute;
+            top: rem(98);
+            right: rem(160);
+            color: black;
+
+            #{$root}--layout-2 & {
+                top: rem(80);
+                right: rem(217);           
+            }
+
+            @include media-breakpoint-down(md) {
+                top: rem(104);
+                right: rem(173);
+
+                #{$root}--layout-2 & {
+                    top: rem(88);
+                    right: rem(230);
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                top: rem(69);
+                right: rem(113);
+
+                
+                #{$root}--layout-2 & {
+                    top: rem(73);
+                    right: rem(112);
+                }
+            }
+
+            .special {
+                color: $color-green;
+            }
+        }
+    }
+}

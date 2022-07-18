@@ -1,0 +1,57 @@
+.block-inform {
+    position: relative;
+
+    &__desc {
+        max-width: rem(545);
+       // margin-left: rem(390);
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: rem(255);
+
+        @include media-breakpoint-down(md) {
+            padding-bottom: rem(271);
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-bottom: rem(160);
+        }
+    }
+
+    &__label {
+        padding-top: rem(8);
+    }
+
+    &__image {
+        margin-left: auto;
+        padding-right: rem(49);
+
+        .icon {
+            height: auto;
+        }
+    }
+
+    &__cards {
+        position: absolute;
+        bottom: rem(-72);
+        right: 0;
+        left: 0;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+        padding-left: rem(322);
+
+        @include media-breakpoint-down(md) {
+           padding-left: rem(110);
+        }
+
+        @include media-breakpoint-down(sm) {
+            bottom: rem(-56);
+            margin: 0 auto;
+        }
+    }
+}

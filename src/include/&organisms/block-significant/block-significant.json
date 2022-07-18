@@ -8,7 +8,8 @@
                 "<span>создавая лучшее будущее</span>"
             ],
             "label": "Устойчивое развитие",
-            "layout": "basic"
+            "theme": "basic",
+            "layout": "4"
         },
         "icon": {
             "name": "80/nature",
@@ -16,6 +17,10 @@
         },
         "img": {
             "src": "tmp/blocks/block-significant/tree.png",
+            "alt": "image alt"
+        },
+        "img_mask": {
+            "src": "tmp/blocks/block-significant/tree2.png",
             "alt": "image alt"
         },
         "txt": "Мы осознаем свою ответственность перед обществом и окружающей средой и считаем, что вклад в устойчивое развитие не менее важен, чем рост производственных и финансовых показателей"

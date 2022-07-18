@@ -1,0 +1,173 @@
+.block-meaning {
+    @include media-breakpoint-down(sm) {
+        padding-top: rem(22);
+    }
+
+    &__wrap {
+        display: flex;
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column-reverse
+        }
+    }
+
+    &__title {
+        @include h2;
+        margin-bottom: rem(64);
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: rem(118);
+            max-width: rem(500);
+        }
+
+        @include media-breakpoint-only(md) {
+            margin-bottom: 121px;
+            max-width: rem(360);
+        }   
+
+        &-line {
+            span {
+                font-weight: 700;
+            }
+
+            &:last-child {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    &__cover {
+        max-width: rem(364);
+        width: 100%;
+        margin-right: rem(75);
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+
+    &__content {
+        position: relative;
+        margin-right: rem(75);
+        max-width: rem(480);
+        width: 100%;
+        padding-top: rem(214);
+
+        @include media-breakpoint-down(md) {
+            padding-top: rem(95);
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 0;
+            max-width: initial;
+            margin-right: 0;
+        }
+    }
+
+    &__sticky {
+        position: sticky;
+        top: 0;
+        padding-top: rem(110);
+       
+
+        &--factoid {
+            padding-top: rem(215);
+
+            @include media-breakpoint-down(md) {
+                padding-top: rem(320);
+            }
+
+            @include media-breakpoint-down(sm) {
+                position: relative;
+                padding-top: 0;
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+        width: 100%;
+        height: rem(620);
+
+        .image {
+            position: absolute;
+            width: 182%;
+            left: rem(-56);
+            object-fit: contain;
+        }
+    }
+
+    &__box {
+        width: rem(324);
+
+        @include media-breakpoint-down(md) {
+            position: relative;
+            left: rem(-86);
+            width: rem(340);
+        }
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+            left: 0;
+            width: rem(328);
+        }
+    }
+
+    &__factoid {
+        background-color: $color-green;
+        width: rem(324);
+        height: rem(324);
+        padding: rem(45) rem(40) rem(40);
+
+        @include media-breakpoint-down(md) {
+            width: rem(340);
+            height: rem(340);
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: rem(328);
+            height: rem(324);
+            padding: rem(40) rem(40) rem(48);
+        }
+
+        &--mob {
+            display: none;
+
+            @include media-breakpoint-down(sm) {
+                display: flex;
+            }
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: rem(120);
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: rem(47);
+            }
+        }
+    }
+
+    &__items {
+        @include media-breakpoint-down(sm) {
+            margin-top: rem(48);
+        }
+    }
+
+    .card-benefit {
+        &__icon {
+            color: $color-green-light;
+        }
+
+        &__desc {
+            @include media-breakpoint-down(md) {
+                max-width: rem(224);
+            }
+
+            @include media-breakpoint-down(sm) {
+                max-width: rem(260);
+            }
+        }
+    }
+}

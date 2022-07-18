@@ -1,0 +1,16 @@
+<div class="block-inform" {% if block.attr %}{{block.attr}}{% endif %}>
+    <div class="block-inform__container container">
+        {% if block.heading %}
+            {% view '^heading' with {
+                heading: block.heading
+            } %}
+        {% endif %}
+        {% if block.card_move %}
+            <div class="block-inform__cards">
+                {% view "^card-move" with {
+                    card: block.card_move
+                } %}
+            </div>
+        {% endif %}
+    </div>
+</div>

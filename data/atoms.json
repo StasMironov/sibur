@@ -352,6 +352,15 @@
 			"background": "greenlight"
 		}
 	],
+	"buttonsArrow": [
+		{
+			"icon": {
+				"name": "40/arrow",
+				"size": "40"
+			},
+			"text": "Полиэтилен"
+		}
+	],
 	"links": [
 		{
 			"text": "Читать подробнее",

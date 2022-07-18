@@ -82,6 +82,19 @@
 						{% endfor %}
 					</div>
 				</div>
+
+				<div class="mb-24">
+					<p class="text-lead mb-16"><code>button-arrow</code></p>
+					<div style="display: flex; flex-wrap: wrap;">
+						{% for button in buttonsArrow %}
+							<div class="py-8 px-8">
+								{% view '@button-arrow' with {
+									button: button
+								} %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
 				
 				<div class="mb-24">
 					<p class="text-lead mb-16"><code>button-icon theme-line</code></p>

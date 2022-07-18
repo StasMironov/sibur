@@ -1,0 +1,155 @@
+{
+    "block": {
+        "heading": {
+            "title_row":true,
+            "title_hidden": "Наши основные производственные мощности",
+            "title": [
+                "Наши основные производственные",
+                "<span>мощности</span>"
+            ],
+            "label": "Что мы производим",
+            "layout": "5",
+            "theme": "basic"
+        },
+        "items": [
+            {
+                "action": {
+                    "icon": {
+                        "name": "40/arrow",
+                        "size": "40"
+                    },
+                    "text": "Полиэтилен",
+                    "active": true,
+                    "attr": "data-card-btn"
+                },
+                "card_factoid": {
+                    "background": "greenLight",
+                    "active": true,
+                    "factoid": {
+                        "text": "2,8",
+                        "label": "млн т",
+                        "theme": "green"
+                    }
+                },
+                "attr": "data-card-factoid",
+                "active": true
+            },
+            {
+                "action": {
+                    "icon": {
+                        "name": "40/arrow",
+                        "size": "40"
+                    },
+                    "text": "Полипропилен",
+                    "attr": "data-card-btn"
+                },
+                "card_factoid": {
+                    "background": "greenLight",
+                    "factoid": {
+                        "text": "2,4",
+                        "label": "млн т",
+                        "theme": "green"
+                    }
+                },
+                "attr": "data-card-factoid"
+            },
+            {
+                "action": {
+                    "icon": {
+                        "name": "40/arrow",
+                        "size": "40"
+                    },
+                    "text": "Синтетические каучуки",
+                    "attr": "data-card-btn"
+                },
+                "card_factoid": {
+                    "background": "greenLight",
+                    "factoid": {
+                        "text": "2,5",
+                        "label": "млн т",
+                        "theme": "green"
+                    }
+                },
+                "attr": "data-card-factoid"
+            },
+            {
+                "action": {
+                    "icon": {
+                        "name": "40/arrow",
+                        "size": "40"
+                    },
+                    "text": "ПЭТ",
+                    "attr": "data-card-btn"
+                },
+                "card_factoid": {
+                    "background": "greenLight",
+                    "factoid": {
+                        "text": "2,1",
+                        "label": "млн т",
+                        "theme": "green"
+                    }
+                },
+                "attr": "data-card-factoid"
+            },
+            {
+                "action": {
+                    "icon": {
+                        "name": "40/arrow",
+                        "size": "40"
+                    },
+                    "text": "Полистирол",
+                    "attr": "data-card-btn"
+                },
+                "card_factoid": {
+                    "background": "greenLight",
+                    "factoid": {
+                        "text": "2,0",
+                        "label": "млн т",
+                        "theme": "green"
+                    }
+                },
+                "attr": "data-card-factoid"
+            },
+            {
+                "action": {
+                    "icon": {
+                        "name": "40/arrow",
+                        "size": "40"
+                    },
+                    "text": "ПВХ",
+                    "attr": "data-card-btn"
+                },
+                "card_factoid": {
+                    "background": "greenLight",
+                    "factoid": {
+                        "text": "1,5",
+                        "label": "млн т",
+                        "theme": "green"
+                    }
+                },
+                "attr": "data-card-factoid"
+            },
+            {
+                "action": {
+                    "icon": {
+                        "name": "40/arrow",
+                        "size": "40"
+                    },
+                    "text": "Поликарбонаты",
+                    "attr": "data-card-btn"
+                },
+                "card_factoid": {
+                    "background": "greenLight",
+                    "factoid": {
+                        "text": "1,8",
+                        "label": "млн т",
+                        "theme": "green"
+                    }
+                },
+                "attr": "data-card-factoid"
+            }
+        ]
+    }
+
+
+}

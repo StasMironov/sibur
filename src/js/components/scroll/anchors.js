@@ -40,16 +40,16 @@ export default {
               })
         })
 
-       const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger : 'body',
-                start: 500,
-                toggleClass: {className: 'scrolled', targets: targetEl},
-                end: () => {
-                document.documentElement.scrollWidth
-                },
-                scrub: true
-            }
-		});
+      const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger : 'body',
+            start: 500,
+            toggleClass: {className: 'scrolled', targets: targetEl},
+            end: () => {
+            document.documentElement.scrollWidth
+            },
+            scrub: true
+        }
+		  });
 	}
 };

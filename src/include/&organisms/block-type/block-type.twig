@@ -1,0 +1,21 @@
+<div class="block-type">
+    <div class="block-type__container container">
+        {% if block.heading %}
+            {% view '^heading' with {
+                heading: block.heading
+            } %}
+        {% endif %}
+        {% if block.items %}
+            <div class="block-type__items">
+                {% for card in block.items %}
+                    <div class="block-type__item">
+                       {% view "^card-info" with {
+                            card: card
+                       }%}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+    </div>
+</div>

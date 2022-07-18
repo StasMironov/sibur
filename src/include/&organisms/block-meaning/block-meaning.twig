@@ -1,0 +1,59 @@
+<div class="block-meaning" {% if block.attr %}{{block.attr}}{% endif %}>
+    <div class="block-meaning__container container">
+            <div class="block-meaning__wrap">
+                {% if block.title_hidden %}
+                    <h2 class="visually-hidden">{{block.title_hidden}}</h3>
+                {% endif %}
+                {% if block.card_move.img %}
+                
+                 <div class="block-meaning__cover">
+                    <div class="block-meaning__sticky">
+                        <div class="block-meaning__img" {% if block.card_move.attr %}{{block.card_move.attr}}{% endif %}>
+                            {% view '@image' with {
+                                image: block.card_move.img
+                            } %}
+                        </div> 
+                    </div>
+                </div>
+                {% endif %}
+                {% if block.items %}
+                    <div class="block-meaning__content">
+                        {% if block.title %}
+                            <div class="block-meaning__title">
+                                {% for title in block.title %}
+                                    <div class="block-meaning__title-line">{{ title }}</div>
+                                {% endfor %}
+                            </div>
+                            {% if block.factoid %}
+                                <div class="block-meaning__factoid block-meaning__factoid--mob">
+                                    {% view '^factoid' with {
+                                        factoid: block.factoid
+                                    } %}
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                        <div class="block-meaning__items">
+                            {% for card in block.items %}
+                                <div class="block-meaning__item">
+                                    {% view "^card-benefit" with {
+                                        block: card
+                                    } %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+                <div class="block-meaning__box">
+                    <div class="block-meaning__sticky block-meaning__sticky--factoid">
+                        {% if block.factoid %}
+                            <div class="block-meaning__factoid">
+                                {% view '^factoid' with {
+                                    factoid: block.factoid
+                                } %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>    
+            </div>  
+    </div>
+</div>

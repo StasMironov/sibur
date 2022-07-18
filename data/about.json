@@ -1,5 +1,113 @@
 {
 	"title": "О компании",
+	"hero_special": {
+		"title_hidden": "Партнеры",
+		"title": [
+			"Партнеры",
+			"<span>для роста</span>"
+		],
+		"background": {
+			"src": "tmp/hero-special/bg.png",
+			"alt": "alt image",
+			"tab": {
+				"srcset": [
+					{
+						"src": "tmp/hero-special/bg.png",
+						"scale": "1"
+					}
+				]
+			}
+		}
+	},
+	"block_inform":{
+        "heading": {
+            "label": "Кто мы",
+            "desc": "СИБУР — крупнейшая интегрированная нефтегазохимическая компания России, лидер отечественной несырьевой экономики и одна из наиболее динамично развивающихся компаний глобальной нефтегазохимии.",
+            "icon": {
+                "name": "logo",
+                "size": "fit"
+            },
+            "theme": "basic",
+            "layout": "3"
+        },
+        "card_move":{
+			"layout": "2",
+            "static": {
+                "img": {
+                    "src": "tmp/cards/card-move/img1.jpg",
+                    "alt": "image alt"
+                }
+            },
+            "move": {
+                "icon": {
+                    "name": "patterns/card-move/arrow2",
+                    "size": "fit"
+                },
+                "attr": "data-inform-target"
+            }
+
+        },
+		"attr": "data-wrap-inform"
+    },
+	"block_benefit":{
+        "heading": {
+            "title_row":true,
+            "title_hidden": "Наш приоритет развития — клиентоцентричность",
+            "title": [
+                "Наш приоритет развития — ",
+                "<span>клиентоцентричность</span>"
+            ],
+            "label": "Наши ценности",
+            "layout": "2",
+            "theme": "basic"
+        },
+        "items": [
+            {
+                "icon": {
+                    "name": "80/focus",
+                    "size": "80"
+                },
+                "desc": "Фокусируемся на развитии ответственного потребления и&nbsp;рынков конечной продукции"
+            },
+            {
+                "icon": {
+                    "name": "80/arms",
+                    "size": "80"
+                },
+                "desc": "Разрабатываем новые продукты с учетом особенностей и потребностей клиентов"
+            },
+            {
+                "icon": {
+                    "name": "80/med",
+                    "size": "80"
+                },
+                "desc": "Предлагаем широкий набор сервисов, формирующих ценностное предложение и способствующих развитию наших партнеров"
+            },
+            {
+                "icon": {
+                    "name": "80/chat",
+                    "size": "80"
+                },
+                "desc": "Выстраиваем процессы, основываясь на передовых технологиях и обратной связи от клиентов"
+            }
+        ],
+        "card_move":{
+            "static": {
+                "img": {
+                    "src": "tmp/cards/card-move/img1.jpg",
+                    "alt": "image alt"
+                }
+            },
+            "move": {
+                "icon": {
+                    "name": "patterns/card-move/arrow",
+                    "size": "fit"
+                },
+                "attr": "data-card-move"
+            }
+        },
+		"attr": "data-move-target"
+    },
     "sliderType": {
 		"heading": {
             "title_row":true,
@@ -9,7 +117,7 @@
                 "<span>компании СИБУР</span>"
             ],
             "label": "Данные по&nbsp;рейтингам&nbsp;2020 г",
-			"layout": "basic"
+			"theme": "basic"
         },
 		"slides": [
 			{
@@ -139,7 +247,7 @@
 		"id": "form-1",
 		"name": "form-1",
 		"method": "POST",
-		"action": "/ajax/contacts/?repo=atol-education.frontend&status=success",
+		"action": "/ajax/call/?repo=atol.frontend&status=success",
 		"attr": "data-ajax-form",
 		"title_hidden": "Оптимальные решения для партнеров",
 		"title": [
@@ -152,20 +260,25 @@
 				"id": "form-1-input-1",
 				"name": "form-1-input-1",
 				"required": true,
-				"label": "ФИО"
+				"label": "ФИО",
+				"autocomplete": "off"
+				
 			},
 			{
 				"input": true,
 				"id": "form-1-input-2",
 				"name": "form-1-input-2",
 				"required": true,
+				"autocomplete": "off",
 				"label": "Компания"
 			},
 			{
 				"input": true,
+				"type": "email",
 				"id": "form-1-input-3",
 				"name": "form-1-input-3",
 				"required": true,
+				"autocomplete": "off",
 				"label": "E-mail"
 			},
 			{
@@ -174,12 +287,14 @@
 				"name": "form-1-input-4",
 				"required": true,
 				"type": "tel",
+				"autocomplete": "off",
 				"label": "Телефон"
 			},
 			{
 				"textarea": true,
 				"id": "form-1-textarea-5",
 				"name": "form-1-textarea-5",
+				"autocomplete": "off",
 				"label": "Комментарий"
 			}
 		],

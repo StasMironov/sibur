@@ -1,0 +1,30 @@
+<div class="block-benefit" {% if block.attr %}{{block.attr}}{% endif %}>
+    <div class="block-benefit__container container">
+        {% if block.heading %}
+            {% view '^heading' with {
+                heading: block.heading
+            } %}
+        {% endif %}
+        {% if block.items %}
+            <div class="block-benefit__wrap">
+                <div class="block-benefit__items">
+                    {% for card in block.items %}
+                        <div class="block-benefit__item">
+                            {% view "^card-benefit" with {
+                                block: card
+                            } %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+    {% if block.card_move %}
+        <div class="block-benefit__cards">
+            {% view "^card-move" with {
+                card: block.card_move
+            } %}
+        </div>
+    {% endif %}
+</div>

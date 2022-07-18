@@ -106,6 +106,12 @@
 		&::-webkit-search-results-decoration {
 			display: none;
 		}
+
+		&.parsley-error {
+			position: relative;
+			border-color: $color-orange;
+			color: $color-orange;
+		}
 	}
 	
 	.input-hint {
