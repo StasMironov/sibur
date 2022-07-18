@@ -1,0 +1,45 @@
+{
+    "block": {
+        "title_hidden": "Электронный каталог",
+		"title": [
+			"Работаем с&nbsp;партнерами",
+            "<span>по всему миру</span>"
+		],
+        "card_move": {
+            "attr": "data-meaning-card",
+            "img": {
+                "src": "tmp/blocks/block-meaning/earth.png",
+                "alt": "image alt"
+            }
+        },
+        "items": [
+            {
+                "icon": {
+                    "name": "80/people",
+				    "size": "80"
+                },
+                "desc": "Партнерство и&nbsp;клиентоориентированность"
+            },
+            {
+                "icon": {
+                    "name": "80/idea",
+                    "size": "80"
+                },
+                "desc": "Технический <br> сервис и R&D"
+            },
+            {
+                "icon": {
+                    "name": "80/nature",
+                    "size": "80"
+                },
+                "desc": "Устойчивые решения и&nbsp;социальная ответственность"
+            }
+        ],
+        "factoid": {
+            "text": "100",
+            "before": ">",
+            "label": "Стран мира"
+        },
+        "attr": "data-meaning-wrap"
+    }
+}

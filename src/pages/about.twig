@@ -2,11 +2,37 @@
 
 {% block content %}
 
-	<div class="pt-lg-40 pt-md-40 pt-24 pb-lg-72 pb-md-40 pb-24 bg-green-superlight">      
+	<div class="bg-green-superlight">      
+		{% view '&hero-special' with {
+			hero: hero_special
+		}%}
+	</div>
+
+	<div class="pt-lg-120 pt-md-96 pt-80 pb-lg-72 pb-md-96 pb-88 bg-white">      
+		{% view '&block-inform' with {
+			block: block_inform
+		}%}
+	</div>
+
+	<div class="pt-lg-96 pt-md-160 pt-120 pb-lg-160 pb-md-160 pb-56 bg-white">      
+		{% view '&block-type' %}
+	</div>
+
+	<div class="pt-lg-96 pt-md-96 pt-80 pb-lg-72 pb-md-72 pb-56 bg-green-light">      
+		{% view '&block-benefit' with {
+			block: block_benefit
+		} %}
+	</div>
+
+	<div class="pt-lg-128 pt-md-128 pt-128 pb-lg-72 pb-md-120 pb-88 bg-white">      
+		{% view '&block-meaning' %}
+	</div>
+
+	<div class="pt-lg-96 pt-md-120 pt-80 pb-lg-72 pb-md-72 pb-56 bg-green-superlight">      
 		{% view '&block-significant' %}
 	</div>
 
-    <div class="pt-lg-40 pt-md-40 pt-24 pb-lg-72 pb-md-40 pb-24 bg-green-superlight">      
+    <div class="pt-lg-56 pt-md-40 pt-24 pb-lg-72 pb-md-40 pb-24 bg-green-superlight">      
 		{% view '&slider-rating' with {
 			slider: sliderType
 		} %}

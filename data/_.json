@@ -7,5 +7,19 @@
 		"md": 640,
 		"lg": 990
 	},
-  "placeholder": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+  "placeholder": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "messages": {
+		"error": {
+			"required": "Обязательное поле",
+			"email": "Введите корректный e-mail адрес",
+			"not_required_email": "Введите корректный адрес электронной почты или оставьте поле пустым",
+			"number": "Введите корректное число",
+			"url": "Введите корректный URL",
+			"tel": "Введите корректный номер телефона",
+			"not_required_tel": "Введите корректный номер телефона или оставьте поле пустым",
+			"password": "Пароль недостаточно надежный",
+			"equal": "Пароль не совпадает",
+			"pattern": "Неверное значение"
+		}
+	}
 }

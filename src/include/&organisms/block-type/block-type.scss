@@ -1,0 +1,21 @@
+.block-type {
+    
+
+    @include media-breakpoint-down(md) {
+        margin-left: 0;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: rem(32);
+        }
+    }
+
+    &__items {
+        margin-left: rem(444);
+
+        @include media-breakpoint-down(md) {
+            margin-left: 0;
+        }
+    }
+}

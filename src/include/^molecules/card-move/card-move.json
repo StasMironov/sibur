@@ -1,0 +1,17 @@
+{
+    "card": {
+        "static": {
+            "img": {
+                "src": "tmp/cards/card-move/img1.jpg",
+                "alt": "image alt"
+            }
+        },
+        "move": {
+            "icon": {
+                "name": "patterns/card-move/arrow",
+                "size": "fit"
+            }
+        }
+    }
+
+}

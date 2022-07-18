@@ -1,0 +1,21 @@
+<div class="hero-special">
+    <div class="hero-special__container container">
+        {% if hero.title_hidden %}
+            <h1 class="visually-hidden">{{hero.title_hidden}}</h1>
+        {% endif %}
+        {% if hero.title %}
+            <div class="hero-special__title">
+                {% for title in hero.title %}
+                    <div class="hero-special__title-line">{{ title }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    {% if hero.background %}
+        <div class="hero-special__background">
+            {% view '@image-adaptive' with {
+                image: hero.background
+            } %}
+        </div>
+    {% endif %}
+</div>

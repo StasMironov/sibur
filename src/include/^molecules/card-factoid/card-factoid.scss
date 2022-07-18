@@ -1,0 +1,21 @@
+.card-factoid {
+    background-color: $color-green;
+    width: rem(324);
+    height: rem(324);
+    padding: rem(45) rem(40) rem(40);
+
+    @include media-breakpoint-down(md) {
+        width: rem(340);
+        height: rem(340);
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: rem(328);
+        height: rem(324);
+        padding: rem(40) rem(40) rem(40);
+    }
+
+    &--bg-greenLight {
+        background-color: $color-green-light;
+    }
+}

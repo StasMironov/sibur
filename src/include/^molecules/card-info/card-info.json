@@ -1,0 +1,17 @@
+{
+    "card": {
+        "action": {
+            "icon": {
+                "name": "40/arrow",
+                "size": "40"
+            },
+            "text": "Полиэтилен",
+            "active": true
+        },
+        "factoid": {
+            "text": "2,8",
+            "before": ">",
+            "label": "Стран мира"
+        }
+    }
+}

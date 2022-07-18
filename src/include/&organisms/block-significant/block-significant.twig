@@ -17,11 +17,25 @@
                     </div>
                 </div>
 
-                <div class="block-significant__img">
-                    {% view '@image' with {
-                        image: block.img
-                    } %}
-                </div>
+                {% if block.img %}
+                    <div class="block-significant__img">
+                        {% view '@image' with {
+                            image: block.img
+                        } %}
+
+                        
+
+                        {% if block.img_mask %}
+                            <div class="block-significant__img block-significant__img--mask">
+                                {% view '@image' with {
+                                    image: block.img_mask
+                                } %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    
+                {% endif %}
             </div>
 
             <div class="block-significant__desc">

@@ -21,7 +21,11 @@
 		"swiper": "^8.2.2",
 		"throttle-debounce": "^5.0.0",
 		"tippy.js": "^6.3.7",
-		"vanilla-lazyload": "^15.1.1"
+		"vanilla-lazyload": "^15.1.1",
+		"parsleyjs": "^2.9.2",
+		"imask": "^6.1.0",
+		"axios": "^0.21.1",
+		"miragejs": "^0.1.41"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.10",

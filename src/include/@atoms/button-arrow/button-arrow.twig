@@ -1,0 +1,41 @@
+{% if button.non_interactive %}
+	<div class="button-arrow button-arrow--non-interactive{% if button.class %} {{ button.class }}{% endif %}{% if button.size %} button-arrow--{{ button.size }}{% endif %}{% if button.theme %} button-arrow--{{ button.theme }}{% endif %}{% if button.background %} button-arrow--bg-{{ button.background }}{% endif %}{{ button.fit ? " button-arrow--fit" : "" }}{{ button.mobFit ? " button-arrow--mob-fit" : "" }}{{ button.loading ? "is-loading" : "" }}">
+		{% if button.text %}
+			<span class="button-arrow__text text-body-medium">{{ button.text }}</span>
+		{% endif %}
+        {% if button.icon %}
+            <span class="button-arrow__icon">
+                {% view '@icon' with {
+                    icon: button.icon
+                } %}
+            </span>
+        {% endif %}
+	</div>
+{% else %}
+	{% if button.href %}
+		<a href="{{ button.href }}"
+		   class="button-arrow{% if button.class %} {{ button.class }}{% endif %}{% if button.size %} button-arrow--{{ button.size }}{% endif %}{% if button.theme %} button-arrow--{{ button.theme }}{% endif %}{% if button.background %} button-arrow--bg-{{ button.background }}{% endif %}{% if button.disabled %} button-arrow--disabled{% endif %}{{ button.fit ? " button-arrow--fit" : "" }}{{ button.mobFit ? " button-arrow--mob-fit" : "" }}{{ button.loading ? "is-loading" : "" }}"{% if button.attr %} {{ button.attr }}{% endif %}{% if button.title %} title="{{ button.title }}"{% endif %}>
+			{% if button.text %}
+				<span class="button-arrow__text text-body-medium">{{ button.text }}</span>
+			{% endif %}
+            <span class="button-arrow__icon">
+                {% view '@icon' with {
+                    icon: button.icon
+                } %}
+            </span>
+		</a>
+	{% else %}
+		<button type="{{ button.type?: 'button' }}"
+				class="button-arrow {% if button.class %}{{ button.class }}{% endif %}{% if button.active %} active {% endif %}{% if button.size %} button-arrow--{{ button.size }}{% endif %}{% if button.theme %} button-arrow--{{ button.theme }}{% endif %}{% if button.background %} button-arrow--bg-{{ button.background }}{% endif %}{{ button.fit ? " button-arrow--fit" : "" }}{{ button.mobFit ? " button-arrow--mob-fit" : "" }}{{ button.loading ? "is-loading" : "" }}"{% if button.attr %} {{ button.attr }}{% endif %}{% if button.title %} title="{{ button.title }}"{% endif %}{% if button.disabled %} disabled{% endif %}>
+			{% if button.text %}
+				<span class="button-arrow__text text-body-medium">{{ button.text }}</span>
+			{% endif %}
+            <span class="button-arrow__icon">
+                {% view '@icon' with {
+                    icon: button.icon
+                } %}
+            </span>
+		</button>
+	{% endif %}
+{% endif %}
+

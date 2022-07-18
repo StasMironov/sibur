@@ -1,0 +1,50 @@
+.card-info {
+    $root: &;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+    }
+
+    &__factoid {
+        position: relative;
+        width: rem(324);
+        position: relative;
+        opacity: 0;
+        visibility: hidden;
+
+        @include media-breakpoint-down(md) {
+            width: rem(340);
+        }
+
+        @include media-breakpoint-down(sm) {
+            height: rem(0);
+            margin-top: rem(0);
+        }
+
+
+       
+
+        .card-factoid {
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            @include media-breakpoint-down(sm) {
+                position: relative;
+                margin-top: rem(29);
+            }
+        }
+        
+        
+    }
+
+    .button-arrow {
+        &.active {
+            pointer-events: none;
+        }
+    }
+}
