@@ -1,37 +1,78 @@
-import IMask from 'imask';
-
 export default {
-	init() {
-		this.tel();
-	},
-	tel() {
-		const elements = document.querySelectorAll('[data-mask-tel]');
+	initMask() {
+		function removeInputMask(target) {
+			target.inputmask('remove');
+		}
 
-		const maskOptions = {
-			mask: [
-				{
-					mask: '+{7}(000)000-00-00',
-					lazy: true,
-				},
-			],
-		};
+		function applyInputMasks(target, maskOpts) {
+			target.inputmasks(maskOpts);
+		}
 
-		elements.forEach((el) => {
-			if (el.hasAttribute('data-initialized-mask')) return;
-			let maskInstance = IMask(el, maskOptions);
-			el.setAttribute('data-initialized-mask', '');
-			el.addEventListener('mask-init', () => {
-				if (!el.hasAttribute('data-initialized-mask')) {
-					maskInstance = IMask(el, maskOptions);
-					el.setAttribute('data-initialized-mask', '');
-				}
-			});
-			el.addEventListener('mask-destroy', () => {
-				if (el.hasAttribute('data-initialized-mask')) {
-					maskInstance.destroy();
-					el.removeAttribute('data-initialized-mask');
-				}
-			});
-		});
+		if ($('.js-mask-tel, [data-mask-tel], [mask-tel]').length > 0) {
+			try {
+				// плагин Inputmask не работает с input[type=email]
+				// вместо этого можно использовать input[type=text] и data-parsley-type="email"
+				let $tel = $('.js-mask-tel, [data-mask-tel], [mask-tel]');
+				const dataArray = $tel.data('mask').split(',');
+				let listArray = [];
+				dataArray.forEach((element) => {
+					let objesctData = {};
+					objesctData.mask = element;
+					listArray.push(objesctData);
+				});
+				const maskOpts = {
+					inputmask: {
+						definitions: {
+							'#': {
+								validator: '[0-9]',
+								cardinality: 1,
+							},
+						},
+						showMaskOnHover: false,
+						autoUnmask: true,
+						clearMaskOnLostFocus: true,
+					},
+					list: listArray,
+					match: /[0-9]/,
+					replace: '#',
+					listKey: 'mask',
+					onMaskChange: function (maskObj, completed) {
+						if (completed) {
+							$tel.blur(function () {
+								$(this).parsley().validate();
+							});
+							if ($(this).val()) {
+								
+								$(this).addClass('not-empty filled');
+							} else {
+								$(this).removeClass('not-empty filled');
+							}
+						} else {
+							if ($(this).val()) {
+								
+								$(this).addClass('not-empty filled');
+							} else {
+								$(this).removeClass('not-empty filled');
+							}
+						}
+					},
+				};
+
+				$tel.each(function () {
+					let $this = $(this);
+
+					$this.change(function (e) {
+						let $this = $(this);
+						removeInputMask($this);
+						applyInputMasks($this, maskOpts);
+					});
+
+					removeInputMask($this);
+					applyInputMasks($this, maskOpts);
+				});
+			} catch (err) {
+				console.log(err);
+			}
+		}
 	},
 };

@@ -10,13 +10,17 @@ export default {
 			if (input.hasAttribute('data-initialize')) continue;
 
 			if (input.value) {
+				
 				input.classList.add('filled');
 			}
+
+			
 
 			input.addEventListener('input', throttle(300, (e) => {
 				const value = e.target.value;
 
 				if (value) {
+					
 					input.classList.add('filled')
 				} else {
 					input.classList.remove('filled')

@@ -10,7 +10,7 @@
 		{% if field.value %} value="{{ field.value }}"{% endif %}
 		{% if field.readonly %} readonly{% endif %}
 		{% if field.attr %} {{ field.attr }}{% endif %}
-		{% if field.type == 'tel' %} data-mask-tel {% if field.pattern %} pattern="{{ field.pattern|raw }}"{% else %} pattern="/^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$/" {% endif %}{% endif %}{% if field.type == 'email' %} data-parsley-pattern="/^([\w.*-]+@([\w-]+\.)+[\w-]{2,4})?$/" {% endif %}>
+		{% if field.type == 'tel' %} data-mask-tel {% if field.pattern %} pattern="{{ field.pattern|raw }}"{% else %} data-parsley-pattern="/[0-9]{11,15}/i" {% endif %}data-mask-tel {% if field.mask_list %} data-mask='{% for item in field.mask_list %}{{item}},{% endfor %}' {% endif %} {% endif %}{% if field.type == 'email' %} data-parsley-pattern="/^([\w.*-]+@([\w-]+\.)+[\w-]{2,4})?$/" {% endif %}>
 	{% if field.label %}
         {% view '@field-label' with {
             field: field

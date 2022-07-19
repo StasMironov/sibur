@@ -46,7 +46,46 @@
 			</div>
 		{% endif %}
 		
-		<div class="footer__policy">
-		</div>
+		{% if footer.bottom %}
+			<div class="footer__bottom text-small">
+				{% if footer.bottom.copy %}
+					<div class="footer__bottom-copy">
+						{{footer.bottom.copy}}
+					</div>
+				{% endif %}
+
+				{% if footer.bottom.company %}
+					<div class="footer__bottom-company">
+						<a class="link" href={{footer.bottom.company.href}}>
+							{{footer.bottom.company.text}}
+						</a>
+					</div>
+				{% endif %}
+
+				
+				{% if footer.creator %}
+					<a href="{{ footer.creator.href }}" class="footer__creator text-small" target="_blank"
+					   rel="nofollow">{{ footer.creator.text }}
+
+					   <div class="footer__bottom-logo">
+							{% if footer.creator.logo %}
+								{% view '@icon' with {
+									icon: footer.creator.icon
+								} %}
+							{% else %}
+								{% view '@icon' with {
+									icon: {
+										name: "logos/uplab",
+										size: "fit"
+									}
+								} %}
+							{% endif %}
+						</div>
+					</a>
+				{% endif %}
+				
+				
+			</div>
+		{% endif %}
 	</div>
 </footer>
