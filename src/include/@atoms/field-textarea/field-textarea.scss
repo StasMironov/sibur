@@ -27,7 +27,10 @@
 	-webkit-text-size-adjust: none;
 	-webkit-border-radius:0px;
 	-webkit-appearance:none;
-	overflow-x: hidden;
+	overflow: auto;
+    resize: vertical;
+	min-height: rem(72);
+	max-height: rem(72);
 	
 	&:not(:disabled) {
 		@include hover {

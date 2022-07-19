@@ -70,20 +70,20 @@
         }
       ]
     },
-    "policy": {
+    "bottom": {
       "copy": "© 2022 ПАО «СИБУР Холдинг»",
-      "agreement": {
-        "href": "javascript:void(0);",
-        "text": "Политика обработки персональных данных"
-      },
       "company": {
         "href": "javascript:void(0);",
         "text": "Политика обработки персональных данных"
-      },
-      "made_by": {
-				"text": "Cделано в",
-				"href": "!#"
-			}
+      }
+    },
+    "creator": {
+      "href": "https://www.uplab.ru/",
+      "text": "Сделано в",
+      "icon": {
+        "name": "logos/uplab",
+        "size": "fit"
+      }
     }
   }
 }

@@ -436,6 +436,13 @@
 			},
 			{
 				"input": true,
+				"id": "form-1-input-2",
+				"name": "form-1-input-2",
+				"autocomplete": "off",
+				"label": "Компания"
+			},
+			{
+				"input": true,
 				"type": "email",
 				"id": "form-1-input-3",
 				"name": "form-1-input-3",
@@ -450,7 +457,16 @@
 				"required": true,
 				"type": "tel",
 				"autocomplete": "off",
-				"label": "Телефон"
+				"label": "Телефон",
+				"mask_list": [
+					"+998-##-###-####",
+					"+7(###)###-##-##",
+					"+380(##)###-##-##",
+					"+7(6##)###-##-##",
+					"+992-##-###-####",
+					"+994-##-###-##-##",
+					"+996-###-######"
+				]
 			},
 			{
 				"textarea": true,

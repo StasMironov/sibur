@@ -147,7 +147,7 @@ export default class FormHandler {
 				$field.val('').trigger('change');
 			}
 
-			field.classList.remove('not-empty');
+			field.classList.remove('not-empty filled');
 			field.classList.remove('parsley-success');
 		}
 	}
