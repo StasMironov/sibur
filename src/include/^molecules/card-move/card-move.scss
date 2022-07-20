@@ -24,6 +24,7 @@
             top: rem(98);
             right: rem(160);
             color: black;
+            z-index: 100;
 
             #{$root}--layout-2 & {
                 top: rem(80);
@@ -54,6 +55,20 @@
             .special {
                 color: $color-green;
             }
+        }
+
+        &--static {
+            position: relative;
+            background-color: $color-green;
+
+
+            img {
+                #{$root}--layout-1 & {
+                    clip-path: url($shape-3);          
+                }
+               
+            }
+            
         }
     }
 }

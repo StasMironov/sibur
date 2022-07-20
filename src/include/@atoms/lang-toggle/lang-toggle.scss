@@ -1,0 +1,71 @@
+.lang-toggle {
+	$root: &;
+
+	position: relative;
+	display: block;
+	min-width: rem(24);
+
+	&__action {
+		position: relative;
+		display: block;
+		background-color: transparent;
+		border: 0;
+		height: rem(22);
+		padding: 0;
+		color: $color-black;
+		@include defaultTransition(color);
+
+		.icon {
+			position: absolute;
+			top: calc(50% - #{rem(8)});
+			right: 0;
+			color: currentColor;
+			@include defaultTransition(transform);
+		}
+
+		@include hover {
+			color: rgba($color-black, 0.4);
+		}
+
+		#{$root}.is-active & {
+			.icon {
+				transform: rotate(180deg);
+			}
+		}
+
+		@at-root .header--transparent & {
+			color: $color-white;
+
+			@include hover {
+				color: rgba($color-white, 0.4);
+			}
+		}
+	}
+
+	&__list {
+		#{$root}:not(.is-active) & {
+			display: none;
+		}
+
+		position: absolute;
+		top: calc(100% + #{rem(11)});
+		left: rem(-21);
+		display: block;
+		width: rem(67);
+		background-color: $color-white;
+		box-shadow: 0 0 rem(16) rgba(0, 0, 0, 0.1);
+		border-radius: rem(8);
+		padding: rem(9);
+	}
+
+	&__link {
+		display: block;
+		padding: rem(5) rem(12);
+		color: $color-black;
+		@include defaultTransition(color);
+
+		@include hover {
+			color: $color-green;
+		}
+	}
+}

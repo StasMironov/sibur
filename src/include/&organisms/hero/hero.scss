@@ -1,7 +1,7 @@
 .hero {
     &__title {
         @include h2;
-        margin-bottom: rem(24);
+        margin-bottom: rem(30);
 
         @include media-breakpoint-up(md) {
             margin-bottom: 0;
@@ -17,10 +17,14 @@
     &__container {
         display: flex;
         flex-direction: column;
+        padding-top: rem(131);
+        padding-bottom: rem(48);
 
         @include media-breakpoint-up(md) {
             justify-content: space-between;
             flex-direction: row;
+            padding-top: rem(229);
+            padding-bottom: rem(61);
         }
     }
 

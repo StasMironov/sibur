@@ -8,6 +8,7 @@ import libs from "./libs";
 import { devices } from './utils/breakpoints';
 
 // components
+import Header from './components/header';
 import input from './components/input';
 import hint from './components/hint';
 import sliders from './components/sliders/index';
@@ -19,6 +20,7 @@ import cardInfo from './components/card-info/card-info';
 import validation from './components/validation';
 import FormHandler from './components/form-handler';
 import ScrollAnimation from './components/scroll-animation/scroll-animation';
+import Toggle from './components/lang-toggle';
 
 // Api
 
@@ -45,15 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.documentElement.classList.add('content-loaded');
 
 	libs.init();
-
 	input.init();
 	hint.init();
 	sliders.init();
 	scroll.init();
-
 	hero.init();
-
 	validation.init();
+	Toggle.init();
+	Header.init();
 
 	
 
@@ -106,6 +107,7 @@ window.addEventListener('reinit', () => {
 	sliders.init();
 	validation.init();
 	new ScrollAnimation();
+	Header.init();
 
 	window.dispatchEvent(new CustomEvent('init.parallaxcard'));
 });
