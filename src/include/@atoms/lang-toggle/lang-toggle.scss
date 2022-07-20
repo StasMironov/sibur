@@ -32,14 +32,6 @@
 				transform: rotate(180deg);
 			}
 		}
-
-		@at-root .header--transparent & {
-			color: $color-white;
-
-			@include hover {
-				color: rgba($color-white, 0.4);
-			}
-		}
 	}
 
 	&__list {

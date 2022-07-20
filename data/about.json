@@ -1,5 +1,133 @@
 {
 	"title": "О компании",
+	"header": {
+		"transparent": true,
+		"logo": {
+			"href": "/sibur.frontend/dist",
+			"icon": {
+				"name": "logo",
+				"size": "fit"
+			}
+		},
+		"nav": [
+			{
+				"text": "Каталог",
+				"submenu": [
+					{
+						"text": "Полиэтилен",
+						"href": "!#"
+					},
+					{
+						"text": "Полипропилен",
+						"href": "!#"
+					},
+					{
+						"text": "Синтетические каучуки",
+						"href": "!#"
+					},
+					{
+						"text": "ПЭТ",
+						"href": "!#"
+					},
+					{
+						"text": "Полистирол",
+						"href": "!#"
+					},
+					{
+						"text": "ПВХ",
+						"href": "!#"
+					},
+					{
+						"text": "Поликарбонаты",
+						"href": "!#"
+					}
+				]
+			},
+			{
+				"text": "О компании",
+				"href": "!#",
+				"active": true
+			},
+			{
+				"text": "Сервисы",
+				"href": "!#"
+			},
+			{
+				"text": "Контакты",
+				"href": "!#"
+			}
+		],
+		"action": {
+			"icon": {
+			  "name": "24/arrow",
+			  "size": "24"
+			},
+			"text": "Купить продукцию",
+			"href": "javascript:void(0);"
+		},
+		"right": [
+			{
+				"text": "Контакты",
+				"href": "!#"
+			}
+		],
+		"lang": {
+			"action": {
+			  "text": "En",
+			  "title": "En"
+			},
+			"items": [
+			  {
+				"href": "javascript:void(0);",
+				"text": "Ru",
+				"title": "Ru"
+			  },
+			  {
+				"href": "javascript:void(0);",
+				"text": "Ch",
+				"title": "Ch"
+			  }
+			]
+		},
+		"form": {
+			"id": "header-form",
+			"name": "header-form",
+			"attr": "data-header-search-form",
+			"method": "GET",
+			"action": "#!",
+			"field": {
+				"id": "header-search",
+				"name": "header-search",
+				"url": "ajax/header-search-result.html",
+				"placeholder": "Поиск по сайту"
+			},
+			"reset": {
+				"title": "Очистить"
+			},
+			"submit": {
+				"title": "Найти"
+			}
+		},
+		"searchToggle": {
+			"icon": {
+				"name": "24/search"
+			},
+			"attr": "data-search-toggle"
+		},
+		"popular": {
+			"text": "Популярные запросы:",
+			"list": [
+				{
+					"href": "javascript:void(0);",
+					"text": "Термоформование"
+				},
+				{
+					"href": "javascript:void(0);",
+					"text": "Базовые полимеры"
+				}
+			]
+		}
+	},
 	"hero_special": {
 		"title_hidden": "Партнеры",
 		"title": [

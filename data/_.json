@@ -33,12 +33,31 @@
       },
       "links": [
         {
-          "href": "javascript:void(0);",
-          "text": "Каталог"
+          "text": "Каталог",
+          "submenu": [
+            {
+              "text": "Полиэтилен",
+              "href": "!#"
+            },
+            {
+              "text": "Полипропилен",
+              "href": "!#",
+              "active": true
+            },
+            {
+              "text": "Синтетические каучуки",
+              "href": "!#"
+            },
+            {
+              "text": "ПЭТ",
+              "href": "!#"
+            }
+          ]
         },
         {
           "href": "javascript:void(0);",
-          "text": "О компании"
+          "text": "О компании",
+          "active": true
         },
         {
           "href": "javascript:void(0);",
@@ -68,7 +87,31 @@
           "text": "Купить продукцию",
           "href": "javascript:void(0);"
         }
-      ]
+      ],
+      "lang": {
+        "action": {
+          "text": "En",
+          "title": "En"
+        },
+        "items": [
+          {
+          "href": "javascript:void(0);",
+          "text": "Ru",
+          "title": "Ru"
+          },
+          {
+          "href": "javascript:void(0);",
+          "text": "Ch",
+          "title": "Ch"
+          }
+        ]
+      },
+      "searchToggle": {
+        "icon": {
+          "name": "24/search"
+        },
+        "attr": "data-search-toggle"
+      }
     },
     "bottom": {
       "copy": "© 2022 ПАО «СИБУР Холдинг»",

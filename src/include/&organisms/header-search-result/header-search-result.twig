@@ -1,0 +1,18 @@
+<div class="header-search-result">
+	<div class="header-search-result__content">
+		<ul class="header-search-result__list">
+			{% for item in result.list %}
+				<li class="header-search-result__item">
+					<a href="{{ item.href }}" class="header-search-result__link">{{ item.text }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+		{% if result.action %}
+			<div class="header-search-result__action">
+				{% view '@link-action' with {
+					link: result.action
+				} %}
+			</div>
+		{% endif %}
+	</div>
+</div>

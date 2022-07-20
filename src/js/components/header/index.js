@@ -15,9 +15,12 @@ export default {
 			start: 'top top',
 			onUpdate: (self) => {
 				if (self.direction > 0) {
-					header.classList.add('is-hide');
+				//	header.classList.add('is-hide');
+				header.classList.add(...classesToAdd);
 				} else {
-					header.classList.remove('is-hide');
+				//header.classList.remove('is-hide');
+
+
 
 					if (self.progress !== 0) {
 						header.classList.add(...classesToAdd);

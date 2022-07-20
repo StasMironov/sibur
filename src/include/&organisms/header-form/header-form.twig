@@ -1,0 +1,32 @@
+<form{% if form.id %} id="{{ form.id }}"{% endif %}{% if form.action %} action="{{ form.action }}"{% endif %}{% if form.method %} method="{{ form.method }}"{% endif %}
+	class="header-form"{% if form.attr %} {{ form.attr }}{% endif %} data-header-form>
+	<div class="header-form__icon">
+		{% view '@icon' with {
+			icon: {
+				name: "24/search"
+			}
+		} %}
+	</div>
+	<input{% if form.field.id %} id="{{ form.field.id }}"{% endif %}
+		type="search"{% if form.field.name %} name="{{ form.field.name }}"{% endif %}
+		class="header-form__field"{% if form.field.url %} data-url="{{ form.field.url }}"{% endif %}{% if form.field.placeholder %} placeholder="{{ form.field.placeholder }}"{% endif %}{% if form.field.attr %} {{ form.field.attr }}{% endif %}
+		data-field>
+	{% if form.submit %}
+		<button type="submit" class="header-form__action header-form__submit" data-submit{% if form.submit.title %} title="{{ form.submit.title }}"{% endif %}>
+			{% view '@icon' with {
+				icon: {
+					name: "24/submit"
+				}
+			} %}
+		</button>
+	{% endif %}
+	{% if form.reset %}
+		<button type="button" class="header-form__action header-form__reset" data-reset{% if form.reset.title %} title="{{ form.reset.title }}"{% endif %}>
+			{% view '@icon' with {
+				icon: {
+					name: "24/close"
+				}
+			} %}
+		</button>
+	{% endif %}
+</form>

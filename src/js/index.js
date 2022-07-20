@@ -21,6 +21,7 @@ import validation from './components/validation';
 import FormHandler from './components/form-handler';
 import ScrollAnimation from './components/scroll-animation/scroll-animation';
 import Toggle from './components/lang-toggle';
+import HeaderSearch from "./components/header-search";
 
 // Api
 
@@ -55,6 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	validation.init();
 	Toggle.init();
 	Header.init();
+
+	new HeaderSearch();
 
 	
 
