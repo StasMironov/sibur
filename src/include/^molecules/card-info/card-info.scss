@@ -25,6 +25,13 @@
             margin-top: rem(0);
         }
 
+        &.active {
+            
+            @include media-breakpoint-down(sm) {
+                margin: rem(30) 0 rem(0);
+            }
+        }
+
 
        
 
@@ -35,7 +42,6 @@
 
             @include media-breakpoint-down(sm) {
                 position: relative;
-                margin-top: rem(29);
             }
         }
         

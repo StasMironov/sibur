@@ -15,14 +15,56 @@
 				{% if footer.base.links %}
 					<div class="footer__links">
 						{% for link in footer.base.links %}
-							<div class="footer__link">
-								{% view "@link" with {
-									link: link
-								} %}
+							<div  class="footer__el {% if link.submenu %}footer__el--submenu{% endif %}">
+								{% if link.href %}
+									<a href={{link.href}} class="footer__link{% if link.active %} active{% endif %}">
+										{{link.text}}
+									</a>
+								{% elseif link.submenu %}
+										<button type="button"
+														class="footer__link footer__link--submenu"{% if item.attr %} {{ item.attr }}{% endif %}>
+											{{ link.text }}
+											{% view '@icon' with {
+												icon: {
+													name: "16/dropdown",
+													size: "16"
+												}
+											} %}
+										</button>	 
+										<div class="footer__submenu">
+											<div class="footer__submenu-wrap">
+												{% for link in link.submenu %}
+													<a href={{link.text}} class="footer__submenu-link{% if link.active %} active{% endif %}">{{link.text}}</a>
+												{% endfor %}
+											</div>
+										</div>
+								{% else %}
+									<span class="header-nav__link
+										{% if item.active %} active{% endif %}">
+											<span class="header-nav__link-text">{{  item.text }}</span>
+									</span>
+								{% endif %}
 							</div>
+							{# <>
+							{% if link.href %}
+								<div class="footer__link">
+									{% view "@link" with {
+										link: link
+									} %}
+								</div>
+							{% elseif link.submenu %}
+								<div class="footer__link footer__link--submenu">
+									{% view "@link" with {
+										link: link
+									} %}
+								</div>
+							{% else %}
+							{% endif %} #}
 						{% endfor %}
 					</div>
 				{% endif %}
+
+				
 
 				{% if footer.base.actions %}
 					<div class="footer__actions">
@@ -38,10 +80,29 @@
 
 
 				<div class="footer__handler">
-					<div class="footer__comp">
-					</div>
-					<div class="footer__comp">
-					</div>
+					{% if footer.base.lang %}
+						<div class="footer__lang">
+							{% view '@lang-toggle' with {
+								toggle: footer.base.lang
+							} %}
+						</div>
+					{% endif %}
+					{% if footer.base.searchToggle %}
+						<button type="button"
+								class="footer__search-toggle"{% if footer.base.searchToggle.attr %} {{ footer.base.searchToggle.attr }}{% endif %}>
+							{% if footer.base.searchToggle.icon %}
+								{% view '@icon' with {
+									icon: footer.base.searchToggle.icon
+								} %}
+							{% else %}
+								{% view '@icon' with {
+									icon: {
+										name: "24/search"
+									}
+								} %}
+							{% endif %}
+						</button>
+					{% endif %}
 				</div>
 			</div>
 		{% endif %}

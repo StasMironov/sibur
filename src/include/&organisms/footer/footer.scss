@@ -3,7 +3,6 @@
 	display: block;
 	background-color: $color-white;
 	margin-top: auto;
-	border: 1px solid black;
 
 	&__logo {
 		display: block;
@@ -21,6 +20,14 @@
 		}
 	}
 
+	&__lang {
+		margin-right: rem(26);
+
+		@include media-breakpoint-down(md) {
+			margin-right: rem(26);
+		}
+	}
+
 	&__base {
 		display: grid;
 		align-items: flex-start;
@@ -34,7 +41,7 @@
 		}
 
 		@include media-breakpoint-only(md) {
-			grid-template-columns: rem(120) rem(108) rem(230);
+			grid-template-columns: rem(120) rem(108) rem(236);
 			grid-column-gap: rem(90);
 		}
 
@@ -53,6 +60,37 @@
 		// grid-column-gap: 90px;
 	}
 
+	&__search-toggle {
+		position: relative;
+		display: block;
+		width: rem(24);
+		height: rem(24);
+		border: 0;
+		padding: 0;
+		background-color: transparent;
+		@include defaultTransition(color);
+
+		@include hover {
+			color: $color-green;
+		}
+
+		&:before {
+			position: absolute;
+			top: rem(-8);
+			left: rem(-8);
+			width: rem(40);
+			height: rem(40);
+			content: "";
+		}
+
+		@include media-breakpoint-only(md) {
+			margin-right: rem(20);
+		}
+		@include media-breakpoint-down(sm) {
+			margin-right: 0;
+		}
+	}
+
 	&__links {
 		width: max-content;
 		margin-bottom: rem(42);
@@ -60,6 +98,10 @@
 		@include media-breakpoint-up(md) {
 			justify-self: flex-end;
 			margin-bottom: 0;
+		}
+
+		@include media-breakpoint-only(md) {
+			margin-right: rem(-5);
 		}
 
 		@include media-breakpoint-down(sm) {
@@ -77,21 +119,87 @@
 		}
 	}
 
-	&__link {
+	&__el {
 		&:not(:last-child) {
 			margin-bottom: rem(16);
 		}
+
+		&--submenu {
+			position: relative;
+
+			.icon {
+				@include defaultTransition(transform);
+			}
+			
+			&:hover {
+				.footer__link--submenu {
+					color: $color-green;
+				}
+				
+
+				& .footer__submenu {
+					opacity: 1;
+					visibility: visible;
+				}
+
+				& .icon {
+					color: $color-green;
+					transform: scaleY(-1);
+				}
+			}
+		}
+	}
+
+	&__link {
+
+		&--submenu {
+			cursor: pointer;
+
+			border: none;
+			background: transparent;
+			padding: 0;
+
+			.icon {
+				margin-left: rem(2);
+			}
+		}
+
+		@include defaultTransition(color);
+
+		&.active {
+			cursor: default;
+			text-decoration: none;
+			pointer-events: none;
+			color: $color-green;
+		}
+
+		&:hover {
+			color: $color-green;
+			text-decoration: none;
+		}
+		
 	}
 
 	&__actions {
+		max-width: rem(226);
+
 		@include media-breakpoint-down(sm) {
 			grid-area: actions;
+			max-width: rem(236);
 		}
 	}
 
 	&__action {
 		&:not(:last-child){
 			margin-bottom: rem(24);
+		}
+
+		@include media-breakpoint-down(md) {
+			width: 100%;
+		}
+
+		.button-icon {
+			width: 100%;
 		}
 	}
 
@@ -108,18 +216,51 @@
 		@include media-breakpoint-down(sm) {
 			grid-area: handler;
 			justify-self: flex-end;
-			padding-top: rem(27);
+			padding-top: rem(24);
 		}
 	}
 
-	&__comp {
-		width: rem(24);
-		height: rem(24);
-		background-color: red;
+	&__submenu {
+		position: absolute;
+		z-index: 1;
+		left: rem(-34);
+		right: 0;			
+		min-width: rem(241);
+		opacity: 0;
+		visibility: hidden;
+		@include defaultTransition(opacity);
+		padding-top: rem(6);
 
-		&:not(:last-child) {
-			margin-right: rem(32);
+		@include media-breakpoint-down(sm) {
+			left: 0;
 		}
+
+		&-wrap {
+			background-color: $color-white;
+			display: flex;
+			flex-direction: column;
+			border-radius: rem(24);
+			box-shadow: 0 rem(8) rem(24) rgba(4, 20, 35, 0.08);
+			padding: rem(26) rem(32) rem(15);
+		}
+
+		&-link {
+			margin-bottom: rem(8);
+			@include defaultTransition(color);
+
+			&.active {
+				cursor: default;
+				text-decoration: none;
+				pointer-events: none;
+				color: $color-green;
+			}
+
+			&:hover:not(.active) {
+				color: $color-green;
+				text-decoration: none;
+			}
+		}
+
 	}
 
 	&__bottom {	

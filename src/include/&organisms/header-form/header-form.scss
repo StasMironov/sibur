@@ -1,0 +1,134 @@
+.header-form {
+	$root: &;
+
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding: 0 rem(16);
+
+	@include media-breakpoint-up(lg) {
+		padding: 0 rem(48);
+	}
+	@include media-breakpoint-only(md) {
+		padding: 0 rem(24);
+	}
+
+	&__field {
+		display: block;
+		width: 100%;
+		height: rem(40);
+		padding: 0 rem(80) 0 rem(40);
+		border: 0;
+		background-color: transparent;
+		@include text-body;
+
+		@include media-breakpoint-up(lg) {
+			padding: 0 rem(80) 0 rem(56);
+		}
+		@include media-breakpoint-only(md) {
+			padding: 0 rem(80) 0 rem(64);
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&::placeholder {
+			color: rgba($color-black, 0.4);
+			opacity: 1;
+		}
+
+		&::-ms-clear {
+			display: none;
+		}
+
+		&::-ms-reveal {
+			display: none;
+		}
+
+		&::-webkit-search-decoration,
+		&::-webkit-search-cancel-button,
+		&::-webkit-search-results-button,
+		&::-webkit-search-results-decoration {
+			display: none;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: rem(31);
+		left: rem(14);
+		width: rem(24);
+		height: rem(24);
+
+		@include media-breakpoint-up(lg) {
+			left: rem(55);
+		}
+		@include media-breakpoint-up(md) {
+			top: rem(38);
+		}
+		@include media-breakpoint-only(md) {
+			left: rem(38);
+		}
+	}
+
+	&__action {
+		position: absolute;
+		//display: none;
+		top: rem(31);
+		width: rem(24);
+		height: rem(24);
+		padding: 0;
+		border: 0;
+		background-color: transparent;
+		//color: $color-white;
+		@include defaultTransition(color);
+
+		@include media-breakpoint-up(md) {
+			top: rem(37);
+		}
+
+		@include hover {
+			color: $color-green;
+		}
+
+		&:before {
+			position: absolute;
+			top: rem(-8);
+			left: rem(-8);
+			width: rem(40);
+			height: rem(40);
+			content: "";
+		}
+
+		#{$root}__field.filled ~ & {
+			display: block;
+		}
+	}
+
+	&__reset {
+		right: rem(16);
+
+		@include media-breakpoint-up(lg) {
+			right: rem(58);
+		}
+		@include media-breakpoint-only(md) {
+			right: rem(40);
+    		top: rem(38);
+		}
+	}
+
+	&__submit {
+		right: rem(64);
+
+		@include media-breakpoint-up(lg) {
+			right: rem(106);
+		}
+		@include media-breakpoint-only(md) {
+			right: rem(88);
+    		top: rem(38);
+		}
+	}
+}

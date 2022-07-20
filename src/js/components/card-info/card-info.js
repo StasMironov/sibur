@@ -14,83 +14,121 @@ export default class cardInfo {
 		this.init = props.init;
 		this.btn = props.btn;
 		this.card = props.card;
-        this.heightCard = props.height;
+        this.heightCard = '';
         this.offset = 20;
+        this.ratio = false;
 
 		if (this.init) {
+            
 			this.render();
 		}
 	}
 
-    showCard(){
-        if (!document.querySelectorAll(this.btn).length > 0) return;
-		const btns = document.querySelectorAll(this.btn);
-		const cards = document.querySelectorAll(this.card);
-        let heightCard = this.heightCard;
+    handleCard(){
+        let buttons = this.getBtn();
 
-        let cardsArr = Array.from(cards)
-
-        let state = cardsArr.filter(card=>card.classList.contains('active'));
-
-        let block = $(".block-type").parent()[0].offsetTop + $(".block-type").parent().outerHeight();
-        let paddingBottom = $(".block-type").parent()[0];
-
-       
-
-        if(state.length){
-            gsap.set(state, {autoAlpha:1, height:heightCard})
-        }
-        
-        btns.forEach((element, index)=>{
-            element.addEventListener('click', function(e) {
-                let thisBtn = element;
-                let currentIndex = index;
-                console.log(paddingBottom);
-                
-                let innerBlock = cards[currentIndex].offsetTop + $(cards[currentIndex]).children().outerHeight();
-              
-                btns.forEach((btn, j)=>{
-                    btn.classList.remove('active');
-                    cards[j].classList.remove('active');
-                    gsap.to(cards[j], 0.3, {autoAlpha:0});
-                    gsap.to(cards[j], 0.3, {height: 0});
-                });
-
-                if(!thisBtn.classList.contains('active')){
-                    thisBtn.classList.add('active')
-                    cards[currentIndex].classList.add('active');
-                    gsap.to(cards[currentIndex], 0.3, {height:heightCard});
-                   
-                    gsap.to(cards[currentIndex], { autoAlpha: 1, y: ()=>{
-                        return (innerBlock ) > block ? (-(innerBlock - block) - 40) : 20;
-                    }} )
-                }
-            });
+        buttons.forEach((button, index)=>{
+            button.addEventListener('click', () => {
+                this.hideCard();
+                this.showActiveCard(button, index, this.ratio);
+            })
         });
     }
 
-	render() {
-        let heightCard = this.heightCard;
-        let that = this;
+    getCards(){
+        if(document.querySelectorAll(this.card).length > 0) {
+            let cards = document.querySelectorAll(this.card);
+            return cards;
+        }
+    }
 
+    getOffsetWrap(){
+        if(!document.querySelector(".block-type")) return;
+        let block = $(".block-type").parent()[0].offsetTop + $(".block-type").parent().outerHeight();
+        return block;
+    }
 
-        var adjust_size = function() {
-            if (!isMob()) {
-                that.heightCard = 'auto';
-            } else {
-                that.heightCard = heightCard;
-            }
+    getOffsetCard(card){
+        if(!card) return;
+        let innerBlock = card.offsetTop + $(card).children().outerHeight();
+        return innerBlock;
+    }
 
-           
-            that.showCard();
-            
-            // debounce(300, function() {
-            //     console.log('resize');
+    hideCard(){
+        let buttons = this.getBtn();
+        
+        buttons.forEach((btn, j)=>{
+            btn.classList.remove('active');
+            this.getCards()[j].classList.remove('active');
+            gsap.to(this.getCards()[j], 0.3, {autoAlpha:0});
+            gsap.to(this.getCards()[j], 0.3, {height: 0});
+        });
+    }
+
+    setCard(props){
+        let cards = this.getCards();
+        let state = Array.from(cards).filter(card=>card.classList.contains('active'));
+
+        if(state.length){
+            gsap.set(state, {autoAlpha:1, height: this.getHeightCard(props).cardAnimHeight});   
+        }
+        return state;
+    }
+
+    showActiveCard(card, index, props){
+        if(!card.classList.contains('active')){
+            card.classList.add('active');
+            this.getCards()[index].classList.add('active');
+             gsap.fromTo( this.getCards()[index], {height: 0}, {height:this.getHeightCard(props).cardAnimHeight});
+
+            console.log(this.getOffsetWrap());
+            console.log(this.getOffsetWrap() > this.getOffsetCard(this.getCards()[index]));
+
+            gsap.fromTo(this.getCards()[index], {y: ($(this.getCards()[index]).children().outerHeight())/2, autoAlpha:0},{autoAlpha: 1, y: ()=>{   
+              
+                if(!this.ratio){
+                   return !(this.getOffsetWrap() > this.getOffsetCard(this.getCards()[index])) ? -($(this.getCards()[index]).children().outerHeight()) + $(this.getCards()[index]).parent().outerHeight()  : 20;
+                } else {
+                    return 0;
+                }
                 
-            // })
-          };
-          adjust_size();
-          $(window).resize(adjust_size);
-       
+            }})
+        }
+
+    }
+
+    getHeightCard(props){
+        if(document.querySelectorAll(this.card).length > 0) {
+            let cardHeight = $(this.card).children().outerHeight();
+            this.heightCard =  !props ? 0 : cardHeight;
+           
+            return {cardHeight: cardHeight, cardAnimHeight: this.heightCard};
+        }
+    }
+
+    getBtn(){
+        if(document.querySelectorAll(this.btn).length > 0) {
+            const btns = document.querySelectorAll(this.btn);
+            return btns;
+        }
+    }
+
+    resizeWindow(){
+        if (!isMob()) {
+            this.ratio = false
+            this.setCard(false);
+        } else {
+            this.ratio = true;
+            this.setCard(true);
+        }
+    }
+
+	render() {
+        $(window).resize(()=>{
+            this.resizeWindow()
+        });
+
+        this.resizeWindow();
+        this.handleCard();
 	}
 }

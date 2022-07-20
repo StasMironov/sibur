@@ -1,10 +1,7 @@
 {
 	"header": {
-		"bg": {
-			"src": "./tmp/header/header-bg.svg"
-		},
 		"logo": {
-			"href": "/polus.frontend/dist",
+			"href": "/sibur.frontend/dist",
 			"icon": {
 				"name": "logo",
 				"size": "fit"
@@ -60,6 +57,44 @@
 				"title": "Ch"
 			  }
 			]
-		  }
+		},
+		"form": {
+			"id": "header-form",
+			"name": "header-form",
+			"attr": "data-header-search-form",
+			"method": "GET",
+			"action": "#!",
+			"field": {
+				"id": "header-search",
+				"name": "header-search",
+				"url": "ajax/header-search-result.html",
+				"placeholder": "Поиск по сайту"
+			},
+			"reset": {
+				"title": "Очистить"
+			},
+			"submit": {
+				"title": "Найти"
+			}
+		},
+		"searchToggle": {
+			"icon": {
+				"name": "24/search"
+			},
+			"attr": "data-search-toggle"
+		},
+		"popular": {
+			"text": "Популярные запросы:",
+			"list": [
+				{
+					"href": "javascript:void(0);",
+					"text": "Термоформование"
+				},
+				{
+					"href": "javascript:void(0);",
+					"text": "Базовые полимеры"
+				}
+			]
+		}
 	}
 }
