@@ -1,11 +1,10 @@
 {% extends "layouts::_page.twig" %}
 
 {% block content %}
-	<div class="pt-lg-128 pt-md-128 pt-128 pb-lg-64 pb-md-64 pb-48" >
-		{% view '&hero' with {
-			hero: hero
-		} %}
-	</div>
+	{% view '&hero' with {
+		hero: hero
+	} %}
+	
 
 	{% view '&block-navigate' with {
 		block: block_navigate

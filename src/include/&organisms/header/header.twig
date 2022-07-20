@@ -1,0 +1,102 @@
+{% set index = 0 %}
+
+<header class="header"
+		data-header
+		data-animate-custom
+>
+	<div class="header__container container">
+		<div data-menu-burger
+			 class="header-burger not-active">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+
+		<div class="header__logo">
+			{% if header.logo.href %}
+				<a href="{{ header.logo.href }}" class="header__logo-inner">
+					{# {% view '@icon' with {
+						icon: header.logo.icon
+					} %} #}
+
+					{% view '@icon' with {
+                    	icon: header.logo.icon
+               		 } %}
+				</a>
+			{% else %}
+				<span class="header__logo-inner">
+				{% svg header.logo.icon %}
+			</span>
+			{% endif %}
+		</div>
+
+		{% if header.nav %}
+			<div data-menu-nav class="header-nav">
+				<div class="header-nav__wrap">
+					<div class="header-nav__left">
+						<div class="header-nav__navigate">
+							{% for item in header.nav %}
+							<div data-menu-nav-el
+								 data-index="{{ loop.index }}"
+								 class="header-nav__el {% if item.submenu %}header-nav__el--submenu{% endif %}">
+
+								{% if item.href %}
+									<a href="{{ item.href }}"
+									   class="header-nav__link
+										{% if item.active %} active{% endif %}"
+										{% if item.no_follow %} rel="nofollow"{% endif %}
+									>
+										<span class="header-nav__link-text">{{  item.text }}</span>
+									</a>
+								{% elseif item.submenu %}
+									<div class="header-nav__link header-nav__link--submenu
+										{% if item.active %} active{% endif %}">
+											<span class="header-nav__link-text">{{  item.text }}</span>
+											<div class="header-nav__submenu"></div>
+									</div>
+								{% else %}
+									<span class="header-nav__link
+										{% if item.active %} active{% endif %}">
+											<span class="header-nav__link-text">{{  item.text }}</span>
+									</span>
+								{% endif %}
+							</div>
+
+							{% set index = loop.index %}
+						{% endfor %}
+						</div>
+						
+
+						{% if header.action %}
+							<div class="header-nav__action">
+								{% view "@button-icon" with {
+									button: header.action
+								} %}
+							</div>
+						{% endif %}
+					</div>
+
+					<div class="header__right">
+						<div class="header__parts">
+							{% if header.lang %}
+								<div class="header__lang">
+									{% view '@lang-toggle' with {
+										toggle: header.lang
+									} %}
+								</div>
+							{% endif %}
+							<div class="header__comp">
+							</div>
+						</div>
+						
+						<button type="button" data-menu-burger class="header__toggle">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	</div>
+</header>

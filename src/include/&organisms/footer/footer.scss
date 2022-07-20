@@ -24,12 +24,13 @@
 	&__base {
 		display: grid;
 		align-items: flex-start;
+		margin-bottom: rem(48);
 		
 
 		@include media-breakpoint-up(md) {
 			grid-template-columns: 1fr rem(141) 1fr 1fr;
 			grid-column-gap: rem(129);
-			margin-bottom: rem(62);
+			margin-bottom: rem(64);
 		}
 
 		@include media-breakpoint-only(md) {
@@ -121,15 +122,20 @@
 		}
 	}
 
-	&__bottom {
-		
+	&__bottom {	
 		display: grid;
 		justify-content: space-between;
 		color: rgba($color-black, 0.4);
+		
 
 		@include media-breakpoint-up(md) {
 			grid-template-columns: repeat(3, 1fr);
 			grid-column-gap: rem(11);
+		}
+
+		@include media-breakpoint-only(md) {
+			grid-template-columns: repeat(2, auto);
+			grid-row-gap: 10px;
 		}
 
 		&-logo {
@@ -138,8 +144,20 @@
 			margin-left: rem(8);
 		}
 
+		&-copy {
+			@include media-breakpoint-down(sm) {
+				margin-bottom: rem(8);
+			}
+		}
+
 		&-company {
-			
+			@include media-breakpoint-only(md) {
+				grid-column: 1/2;
+			}
+
+			@include media-breakpoint-down(sm) {
+				max-width: rem(200);
+			}
 		}
 
 		.link {
@@ -151,14 +169,28 @@
 		}
 	}
 
-	
-
 	&__creator {
 		display: flex;
     	align-items: center;
 		justify-self: flex-end;
 		color: rgba($color-black, 0.4);
-	}
+		@include defaultTransition(color);
 
-	
+		@include hover {
+			color: rgba($color-green, 1);
+		}
+
+		@include media-breakpoint-down(md) {
+			grid-row-start: 1;
+			grid-column-start: 2;
+			grid-row-end: 3;
+			grid-column-end: 3;
+			align-self: flex-end;
+			margin-bottom: rem(7);
+		}
+
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 0;
+		}
+	}
 }
