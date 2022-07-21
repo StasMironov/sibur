@@ -62,9 +62,18 @@
             background-color: $color-green;
 
 
+            #{$root}--theme-black & {
+                background-color: $color-black;
+            }
+
+
             img {
                 #{$root}--layout-1 & {
                     clip-path: url($shape-3);          
+                }
+
+                #{$root}--layout-2 & {
+                    clip-path: url($shape-4);          
                 }
                
             }

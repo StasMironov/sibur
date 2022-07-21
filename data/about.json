@@ -160,18 +160,22 @@
         },
         "card_move":{
 			"layout": "2",
-			"theme": "green",
+			"theme": "black",
             "static": {
 				"img": {
-					"src": "tmp/cards/card-move/img1.jpg",
+					"src": "tmp/cards/card-move/img2.jpg",
 					"alt": "alt image",
 					"tab": {
 						"srcset": [
 							{
-								"src": "tmp/cards/card-move/img1.jpg",
+								"src": "tmp/cards/card-move/img2.jpg",
 								"scale": "1"
 							}
 						]
+					},
+					"shape": {
+						"name": "shape/shape-4",
+						"size": "fit"
 					}
 				}
             },
@@ -259,7 +263,7 @@
                 "Динамика ESG-рейтинга",
                 "<span>компании СИБУР</span>"
             ],
-            "label": "Данные по&nbsp;рейтингам&nbsp;2020 г",
+            "label": "Данные <br> по&nbsp;рейтингам&nbsp;2020 г",
 			"theme": "basic"
         },
 		"slides": [

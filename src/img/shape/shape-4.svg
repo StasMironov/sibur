@@ -1,0 +1,7 @@
+<svg width="0" height="0">
+    <defs>
+        	<clipPath id="shape-4"  clipPathUnits="objectBoundingBox">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M280.397 140.198C280.397 217.472 217.749 280.395 140.199 280.395V0C217.473 0 280.397 62.9233 280.397 140.198ZM0 140.198C0 62.9236 62.6475 0.000244141 140.198 0.000244141V280.395C62.9235 280.395 0 217.748 0 140.198Z" fill="black"/>
+            </clipPath>
+	</defs>
+</svg>
