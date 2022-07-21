@@ -60,6 +60,7 @@ export default class cardInfo {
         buttons.forEach((btn, j)=>{
             btn.classList.remove('active');
             this.getCards()[j].classList.remove('active');
+            $(this.getCards()[j]).closest('.block-type__item').removeClass('active');
             gsap.to(this.getCards()[j], 0.3, {autoAlpha:0});
             gsap.to(this.getCards()[j], 0.3, {height: 0});
         });
@@ -68,6 +69,7 @@ export default class cardInfo {
     setCard(props){
         let cards = this.getCards();
         let state = Array.from(cards).filter(card=>card.classList.contains('active'));
+        $(state).closest('.block-type__item').addClass('active');
 
         if(state.length){
             gsap.set(state, {autoAlpha:1, height: this.getHeightCard(props).cardAnimHeight});   
@@ -79,10 +81,8 @@ export default class cardInfo {
         if(!card.classList.contains('active')){
             card.classList.add('active');
             this.getCards()[index].classList.add('active');
-             gsap.fromTo( this.getCards()[index], {height: 0}, {height:this.getHeightCard(props).cardAnimHeight});
-
-            console.log(this.getOffsetWrap());
-            console.log(this.getOffsetWrap() > this.getOffsetCard(this.getCards()[index]));
+            $(this.getCards()[index]).closest('.block-type__item').addClass('active');
+            gsap.fromTo( this.getCards()[index], {height: 0}, {height:this.getHeightCard(props).cardAnimHeight});
 
             gsap.fromTo(this.getCards()[index], {y: ($(this.getCards()[index]).children().outerHeight())/2, autoAlpha:0},{autoAlpha: 1, y: ()=>{   
               
