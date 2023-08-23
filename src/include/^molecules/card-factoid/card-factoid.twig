@@ -1,7 +1,0 @@
-<div class="card-factoid {% if card.background %} card-factoid--bg-{{card.background}}{% endif %}">
-    {% if card.factoid %}
-        {% view '^factoid' with {
-            factoid: card.factoid
-        } %}
-    {% endif %}
-</div>

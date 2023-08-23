@@ -1,8 +1,0 @@
-@import "~swiper/swiper";
-@import "~swiper/modules/lazy/lazy";
-@import "~swiper/modules/effect-fade/effect-fade";
-
-.swiper-lazy-preloader {
-	border: rem(4) solid $color-red;
-	border-top-color: transparent;
-}

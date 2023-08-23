@@ -1,7 +1,0 @@
-{
-  "name": "uplab/sibur.frontend",
-  "type": "bitrix-d7-template",
-  "require": {
-    "composer/installers": "~1"
-  }
-}
